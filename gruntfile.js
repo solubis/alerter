@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var grunt = require('grunt');
 
-var saveVersion = function(version){
+var saveVersion = function (version) {
     var packageJSON = grunt.file.readJSON('package.json');
     var bowerJSON = grunt.file.readJSON('bower.json');
 
@@ -226,6 +226,16 @@ module.exports = function (grunt) {
                     cwd: '<%= app %>/images/',
                     src: ['**'],
                     dest: '<%= dist %>/images/'
+                }, {
+                    expand: true,
+                    cwd: '<%= app %>/data/',
+                    src: ['**'],
+                    dest: '<%= dist %>/data/'
+                }, {
+                    expand: true,
+                    cwd: '../login/dist/',
+                    src: ['**'],
+                    dest: '<%= dist %>/login/'
                 }, {
                     expand: true,
                     cwd: '<%= app %>/fonts',
