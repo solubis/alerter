@@ -1,0 +1,124 @@
+<form role="form" novalidate name="form" class="dictionary-edit" ng-escape="$close()">
+
+    <div class="modal-header">
+        <h4 class="modal-title" translate>Metadata field</h4>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="form-group">
+            <label translate>Code</label>
+            <input class="form-control"
+                   name="code"
+                   validate-code
+                   maxlength="16"
+                   autofocus    
+                   focus-if="ctrl.isNew"
+                   ng-required="true"
+                   ng-minlength="3"
+                   ng-maxlength="16"
+                   ng-disabled="!ctrl.isNew"
+                   placeholder="{{'Enter code'|translate}}"
+                   ng-model="ctrl.item.code"/>
+
+            <div class="error-message"
+                 ng-show="form.code.$dirty && form.code.$invalid" translate>
+                Code is required
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label translate>Label</label>
+            <input class="form-control"
+                   name="label"
+                   focus-if="!ctrl.isNew"
+                   maxlength="32"
+                   ng-required="true"
+                   ng-minlength="3"
+                   ng-maxlength="32"
+                   placeholder="{{'Enter label'|translate}}"
+                   ng-model="ctrl.item.label"/>
+
+            <div class="error-message"
+                 ng-show="form.label.$dirty && form.label.$invalid" translate>
+                Label is required (3-32 characters)
+            </div>
+        </div>
+
+        <div class="form-group" ng-if="ctrl.item.type === 'url'">
+            <label translate>Template
+                <i class="md md-help"
+                   popover-placement="right"
+                   popover="Template should be URL using { { value } } variables">
+                </i></label>
+            <input class="form-control"
+                   name="template"
+                   maxlength="255"
+                   ng-required="false"
+                   ng-minlength="5"
+                   ng-maxlength="255"
+                   tooltip=""
+                   placeholder="{{'Enter template'|translate}}"
+                   ng-model="ctrl.item.template"/>
+        </div>
+
+        <div class="form-group">
+            <label translate>Description</label>
+            <input class="form-control"
+                   name="description"
+                   maxlength="255"
+                   ng-required="false"
+                   ng-minlength="3"
+                   ng-maxlength="255"
+                   placeholder="{{'Enter description'|translate}}"
+                   ng-model="ctrl.item.description"/>
+        </div>
+
+        <div class="form-group">
+            <label translate>Data type</label>
+            <select class="form-control"
+                    name="type"
+                    ng-disabled="!ctrl.isNew"
+                    ng-required="true"
+                    ng-model="ctrl.item.type">
+                <option value="number" translate>number</option>
+                <option value="date" translate>date</option>
+                <option value="text" translate>text</option>
+                <option value="string" translate>string</option>
+                <option value="boolean" translate>boolean</option>
+                <option value="url" translate>url</option>
+            </select>
+
+            <div class="error-message"
+                 ng-show="form.category.$dirty && form.category.$invalid" translate>Data type is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox checkbox-inline">
+                <input type="checkbox"
+                       name="readOnly"
+                       ng-model="ctrl.item.readOnly"
+                       ng-required="false">
+                   <i class="input-helper"></i>
+                {{ 'Read only after create' | translate }}
+            </label>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <input type="button"
+               class="btn btn-link"
+               value="{{'Cancel'|translate}}"
+               ng-click="$close()">
+
+        <input type="submit"
+               class="btn btn-primary"
+               value="{{'Save'|translate}}"
+               ng-disabled="form.$invalid || form.$pristine"
+               ng-click="ctrl.saveChanges(form)">
+    </div>
+
+</form>

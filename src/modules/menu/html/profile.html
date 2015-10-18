@@ -1,0 +1,27 @@
+<div ng-escape="$close()">
+
+    <div class="modal-header">
+        <h4 class="modal-title">{{'Profile'|translate}} : {{ ctrl.userFullName }}</h4>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="card profile-view">
+            <div class="pv-header">
+                <img alt="" class="pv-main" src="images/avatar.jpg">
+            </div>
+
+            <div class="pv-body">
+                <h2>{{ ctrl.userFullName }}</h2>
+                <br/>
+                <p>Login: <strong>{{ ctrl.userLogin }}</strong></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <input class="btn btn-link" ng-click="$close()" type="button" value="{{'Close'|translate}}">
+    </div>
+
+</div>

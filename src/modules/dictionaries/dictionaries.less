@@ -1,0 +1,38 @@
+
+ul[dnd-list] {
+    position: relative;
+    min-height: 42px;
+    padding-left: 0;
+    margin-top: 10px;
+
+    .dndDraggingSource {
+        display: none;
+    }
+    .dndPlaceholder {
+        display: block;
+        background-color: #ddd;
+        min-height: 42px;
+    }
+
+    li {
+        position: relative;
+        background-color: @gray-lightest;
+        border-bottom: 1px solid @gray-light;
+        display: block;
+        padding: 10px 15px;
+
+        small {
+            display: block;
+        }
+    }
+
+    li.selected {
+        background-color: @brand-primary;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.error-message.metadata-error {
+    font-size: @font-size-h6;
+}

@@ -1,0 +1,82 @@
+<form role="form" novalidate name="form" class="workflow" ng-escape="$close()">
+
+    <div class="modal-header">
+        <h4 class="modal-title" translate>Workflow</h4>
+    </div>
+
+    <div class="modal-body">
+        <tabset>
+            <tab heading="{{'Szczegóły'|translate}}" active="true">
+
+                <div class="form-group">
+                    <label translate>Name</label>
+                    <input class="form-control"
+                           name="name"
+                           maxlength="32"
+                           autofocus
+                           ng-required="true"
+                           ng-minlength="3"
+                           ng-maxlength="32"
+                           placeholder="{{'Enter name'|translate}}"
+                           ng-model="ctrl.workflow.name"/>
+
+                    <div class="error-message"
+                         ng-show="form.name.$dirty && form.name.$invalid" translate>
+                        Name is required (3-32 characters)
+                    </div>
+
+                </div>
+
+                <div class="form-group" ng-if="!ctrl.isNew()">
+                    <label translate>Creator</label>
+                    <input class="form-control" disabled value="{{ ctrl.workflow.createdBy }}">
+                </div>
+
+                <div class="form-group">
+                    <span name="active"
+                          toggle-switch
+                          tooltip="{{'Workflow activation'|translate}}"
+                          ng-disabled="!ctrl.workflow.definition.trim().length || !ctrl.activationEnabled"
+                          ng-model="ctrl.active">{{'Active'|translate}}
+                          </span>
+                </div>
+
+                <div class="error" ng-if="ctrl.validationError" ng-bind-html="ctrl.validationError"></div>
+                <div class="success" ng-if="ctrl.validationResult === true" translate>Validation Successfull!</div>
+
+            </tab>
+
+            <tab heading="{{'Workflow definition'|translate}}">
+                <div ui-ace="ctrl.config"
+                     name="definition"
+                     ng-required="true"
+                     ng-model="ctrl.workflow.definition">
+                </div>
+
+                <div class="error" ng-if="ctrl.validationError" ng-bind-html="ctrl.validationError"></div>
+                <div class="success" ng-if="ctrl.validationResult === true" translate>Validation Successfull!</div>
+            </tab>
+
+        </tabset>
+    </div>
+
+    <div class="modal-footer">
+        <input type="button"
+               class="btn btn-link"
+               value="{{ 'Cancel' | translate }}"
+               ng-click="$close()">
+
+        <input type="submit"
+               class="btn btn-default"
+               value="{{ 'Validate' | translate }}"
+               ng-disabled="!ctrl.workflow.definition || !ctrl.workflow.definition.length"
+               ng-click="ctrl.validate(form)">
+
+        <input type="submit"
+               class="btn btn-primary"
+               value="{{ 'Save' | translate}}"
+               ng-disabled="form.$invalid || form.$pristine"
+               ng-click="ctrl.saveChanges(form)">
+    </div>
+
+</form>

@@ -1,0 +1,115 @@
+<form role="form" novalidate name="form" class="dictionary-edit" ng-escape="$close()">
+
+    <div class="modal-header">
+        <h4 class="modal-title" translate>Product</h4>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="form-group">
+            <label translate>Code</label>
+            <input class="form-control"
+                   name="code"
+                   maxlength="16"
+                   validate-code
+                   autofocus
+                   focus-if="ctrl.isNew"
+                   ng-required="true"
+                   ng-minlength="3"
+                   ng-maxlength="16"
+                   ng-disabled="!ctrl.isNew"
+                   placeholder="{{'Enter code'|translate}}"
+                   ng-model="ctrl.item.code"/>
+
+            <div class="error-message"
+                 ng-show="form.code.$dirty && form.code.$invalid" translate>
+                Code is required
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label translate>Label</label>
+            <input class="form-control"
+                   name="label"
+                   focus-if="!ctrl.isNew"
+                   maxlength="32"
+                   ng-required="true"
+                   ng-minlength="3"
+                   ng-maxlength="32"
+                   placeholder="{{'Enter label'|translate}}"
+                   ng-model="ctrl.item.label"/>
+
+            <div class="error-message"
+                 ng-show="form.label.$dirty && form.label.$invalid" translate>
+                Label is required (3-32 characters)
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <div class="row">
+
+                <div class="col-xs-6">
+                    <label>{{'Available fields'|translate}} <i class="md md-help" tooltip="{{ 'Drag to/from chosen fields' | translate}}"></i></label>
+                    <ul dnd-list="ctrl.globalMetadata">
+
+                        <li ng-repeat="item in ctrl.globalMetadata"
+                            dnd-draggable="item"
+                            dnd-moved="ctrl.removeElementFromGlobalMetadata($index)"
+                            dnd-effect-allowed="move"
+                            dnd-selected="ctrl.selected = item"
+                            ng-dblclick="ctrl.addElement($index)"
+                            ng-class="{'selected': ctrl.selected === item}">
+                            <strong>{{item.code}}</strong> : {{ item.type }}
+                            <small>{{ item.label }}</small>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <div class="col-xs-6">
+                    <label>{{'Chosen fields'|translate}} <i class="md md-help" tooltip="{{ 'Drag to/from chosen fields' | translate}}"></i></label>
+                    <ul dnd-list="ctrl.productMetadata">
+
+                        <li ng-repeat="item in ctrl.productMetadata"
+                            dnd-draggable="item"
+                            dnd-moved="ctrl.removeElementFromProductMetadata($index)"
+                            dnd-effect-allowed="move"
+                            dnd-selected="ctrl.selected = item"
+                            ng-dblclick="ctrl.removeElement($index)"
+                            ng-class="{'selected': ctrl.selected === item}">
+                            <strong>{{item.code}}</strong> : {{ item.type }}
+                            <small>{{ item.label }}</small>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="error-message metadata-error"
+                 ng-show="ctrl.validationError"
+                 ng-bind-html="ctrl.validationError" >
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <input type="button"
+               class="btn btn-link"
+               value="{{'Cancel'|translate}}"
+               ng-click="$close()">
+
+        <input type="submit"
+               class="btn btn-primary"
+               value="{{'Save'|translate}}"
+               ng-disabled="form.$invalid"
+               ng-click="ctrl.saveChanges(form)">
+    </div>
+
+</form>

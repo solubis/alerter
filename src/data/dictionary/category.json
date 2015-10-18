@@ -1,0 +1,14 @@
+[
+    {
+        "code": "INF",
+        "label": "Informative"
+    },
+    {
+        "code": "DEC",
+        "label": "DecisionAlert"
+    },
+    {
+        "code": "ACC",
+        "label": "DecisionWithAcceptance"
+    }
+]

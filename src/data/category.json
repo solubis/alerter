@@ -1,0 +1,20 @@
+[
+    {
+        "code": "INF",
+        "label": "Informative",
+        "workflowId": 1,
+        "workflowName": "DEFAULT"
+    },
+    {
+        "code": "DEC",
+        "label": "DecisionAlert",
+        "workflowId": 1,
+        "workflowName": "DEFAULT"
+    },
+    {
+        "code": "ACC",
+        "label": "DecisionWithAcceptance",
+        "workflowId": 1,
+        "workflowName": "DEFAULT"
+    }
+]

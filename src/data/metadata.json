@@ -1,0 +1,72 @@
+[
+    {
+        "code": "mdDtStringRF",
+        "label": "Name for mdDtStringRF",
+        "description": "Description for mdDtStringRF",
+        "type": "string",
+        "required": false
+    },
+    {
+        "code": "mdDtTextRF",
+        "label": "Name for mdDtTextRF",
+        "description": "Description for mdDtTextRF",
+        "type": "text",
+        "required": false
+    },
+    {
+        "code": "mdDtDateRF",
+        "label": "Name for mdDtDateRF",
+        "description": "Description for mdDtDateRF",
+        "type": "date",
+        "required": false
+    },
+    {
+        "code": "mdDtNumberRF",
+        "label": "Name for mdDtNumberRF",
+        "description": "Description for mdDtNumberRF",
+        "type": "number",
+        "required": false
+    },
+    {
+        "code": "mdDtBooleanRF",
+        "label": "Name for mdDtBooleanRF",
+        "description": "Description for mdDtBooleanRF",
+        "type": "boolean",
+        "required": false
+    },
+    {
+        "code": "mdDtStringRT",
+        "label": "Name for mdDtStringRT",
+        "description": "Description for mdDtStringRT",
+        "type": "string",
+        "required": true
+    },
+    {
+        "code": "mdDtTextRT",
+        "label": "Name for mdDtTextRT",
+        "description": "Description for mdDtTextRT",
+        "type": "text",
+        "required": true
+    },
+    {
+        "code": "mdDtDateRT",
+        "label": "Name for mdDtDateRT",
+        "description": "Description for mdDtDateRT",
+        "type": "date",
+        "required": true
+    },
+    {
+        "code": "mdDtNumberRT",
+        "label": "Name for mdDtNumberRT",
+        "description": "Description for mdDtNumberRT",
+        "type": "number",
+        "required": true
+    },
+    {
+        "code": "mdDtBooleanRT",
+        "label": "Name for mdDtBooleanRT",
+        "description": "Description for mdDtBooleanRT",
+        "type": "boolean",
+        "required": true
+    }
+]

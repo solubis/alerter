@@ -1,0 +1,72 @@
+<form name="form" class="alert-attach" ng-escape="$close()">
+
+    <div class="modal-header">
+        <h4 class="modal-title" translate>Attachment</h4>
+        <spinner class="inverse" ng-show="ctrl.isUploading"></spinner>
+    </div>
+
+    <div class="modal-body p-20">
+
+        <tabset>
+            <tab heading="{{'File'|translate}}" select="ctrl.select('file')">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <file-upload ng-model="ctrl.file" validate="ctrl.validateFile($file)"/>
+                    </div>
+                </div>
+            </tab>
+
+            <tab heading="URL" select="ctrl.select('url')">
+
+                <div class="form-group">
+                    <label>URL</label>
+                    <input class="form-control"
+                           type="url"
+                           name="url"
+                           minlength="7"
+                           maxlength="255"
+                           placeholder="http://"
+                           ng-model="ctrl.url">
+
+                    <div class="error-message" ng-show="form.url.$dirty && form.$error.url" translate>
+                        Enter URL starting with http:// or https://
+                    </div>
+                </div>
+            </tab>
+
+        </tabset>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group description">
+                    <label translate>Description</label>
+                    <textarea class="form-control"
+                              autosize
+                              autofocus
+                              maxlength="255"
+                              name="comment"
+                              placeholder="{{'Enter description'|translate}}"
+                              ng-model="ctrl.comment"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+
+        <button type="button" class="btn btn-link"
+                ng-disabled="ctrl.isUploading"
+                ng-click="$dismiss()" translate>
+            Cancel
+        </button>
+
+        <button type="button" class="btn btn-primary"
+                ng-click="ctrl.upload()"
+                ng-disabled="ctrl.isUploading || (!ctrl.isReadyToUpload && !ctrl.url) ">
+            <span ng-if="!ctrl.isUploading" translate>Save</span>
+            <span ng-if="ctrl.isUploading" translate>Uploading</span>
+        </button>
+    </div>
+
+</form>

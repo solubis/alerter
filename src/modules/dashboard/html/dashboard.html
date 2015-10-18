@@ -1,0 +1,471 @@
+<div ng-if="!authorize('ALERTER_ALERT_LIST')">
+
+    <div class="card">
+
+        <div class="card-header">
+            <h2>{{'No permission to access data'|translate}} <small translate>Please login with different credentials or choose accesible content from menu</small></h2>
+        </div>
+        <div class="card-body"></div>
+    </div>
+</div>
+
+<div ng-if="authorize('ALERTER_ALERT_LIST')">
+
+    <div class="block-header">
+
+        <h2 ng-if="!ctrl.charts" translate>Predefined filters</h2>
+
+        <h2 ng-if="ctrl.charts" translate>Dashboard</h2>
+
+        <ul class="actions" style="top:0;" ng-if="ctrl.stats.total > 0">
+            <li>
+                <div class="checkbox checkbox-inline" style="display: inline-block">
+                    <input
+                        type="checkbox"
+                        ng-model="ctrl.charts">
+                    <i class="input-helper"></i>
+                </div>
+                <span style="padding-left: 5px" translate>Dashboard</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="dashboard" ng-if="!ctrl.charts">
+
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th translate>Opened</th>
+                        <th translate>Finalized</th>
+                        <th translate>All</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr class="group">
+                        <td class="row-header" translate>By type</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td class="row-header" translate>Test</td>
+                        <td>
+                            <a ng-href="#/alerts/list?testMode&finalized=false">
+                                {{ ctrl.stats.testMode - ctrl.stats.testModeFinalized }}
+                            </a>
+                        </td>
+
+                        <td>
+                            <a ng-href="#/alerts/list?testMode&finalized">
+                                {{ ctrl.stats.testModeFinalized }}
+                            </a>
+                        </td>
+
+                        <td>
+                            <a ng-href="#/alerts/list?testMode">
+                                {{ ctrl.stats.testMode }}
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="row-header" translate>Production</td>
+                        <td>
+                            <a ng-href="#/alerts/list?testMode=false&finalized=false">
+                                {{ ctrl.stats.total - ctrl.stats.testMode - ctrl.stats.finalized }}
+                            </a>
+                        </td>
+
+                        <td>
+                            <a ng-href="#/alerts/list?testMode=false&finalized">
+                                {{ ctrl.stats.finalized }}
+                            </a>
+                        </td>
+
+                        <td>
+                            <a ng-href="#/alerts/list?testMode=false">
+                                {{ ctrl.stats.total - ctrl.stats.testMode }}
+                            </a>
+                        </td>
+
+                    </tr>
+
+                    <tr class="group">
+                        <td translate>By category</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr ng-repeat="(code, stats) in ctrl.stats.dictionaries.category">
+                        <td class="row-header">{{ code | category }}</td>
+                        <td>
+                            <a ng-href="#/alerts/list?category={{ code }}&finalized=false   ">
+                                {{ stats.total - stats.finalized }}
+                            </a>
+                        </td>
+
+                        <td>
+                            <a ng-href="#/alerts/list?category={{ code }}&finalized">
+                                {{ stats.finalized }}
+                            </a>
+                        </td>
+
+                        <td>
+                            <a ng-href="#/alerts/list?category={{ code }}">
+                                {{ stats.total }}
+                            </a>
+                        </td>
+
+                    </tr>
+
+                    <tr class="group">
+                        <td translate>By product</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr ng-repeat="(code, stats) in ctrl.stats.dictionaries.product">
+                        <td class="row-header">{{ code | product }}</td>
+                        <td>
+                            <a ng-href="#/alerts/list?product={{ code }}&finalized=false">
+                                {{ stats.total - stats.finalized }}
+                            </a>
+                        </td>
+
+                        <td>
+                            <a ng-href="#/alerts/list?product={{ code }}&finalized">
+                                {{ stats.finalized }}
+                            </a>
+                        </td>
+
+                        <td>
+                            <a ng-href="#/alerts/list?product={{ code }}">
+                                {{ stats.total }}
+                            </a>
+                        </td>
+
+                    </tr>
+
+                    <tr class="group">
+                        <td translate>By priority</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr ng-repeat="(code, stats) in ctrl.stats.dictionaries.priority">
+                        <td class="row-header">{{ code | priority }}</td>
+
+                        <td>
+                            <a ng-href="#/alerts/list?priority={{ code }}&finalized=false">
+                                {{ stats.total - stats.finalized }}
+                            </a>
+                        </td>
+                        <td>
+                            <a ng-href="#/alerts/list?priority={{ code }}&finalized">
+                                {{ stats.finalized }}
+                            </a>
+                        </td>
+                        <td>
+                            <a ng-href="#/alerts/list?priority={{ code }}">
+                                {{ stats.total }}
+                            </a>
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="dashboard" ng-if="ctrl.charts">
+
+        <div class="dash-widgets">
+
+            <!-- Summary -->
+
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <a class="mini-charts-item bgm-green" ng-href="#/alerts/list">
+                        <div class="clearfix">
+                            <div class="chart">
+                                <div class="easy-pie main-pie"
+                                     pie-chart
+                                     track-color="rgba(255,255,255,0.2)"
+                                     scale-color="rgba(255,255,255,0.5)"
+                                     bar-color="rgba(255,255,255,0.7)"
+                                     line-width="7"
+                                     line-cap="butt"
+                                     size="80"
+                                     percent="100">
+
+                                    <div class="percent">100</div>
+                                </div>
+                            </div>
+                            <div class="count">
+                                <small translate>All</small>
+                                <h2>{{ ctrl.stats.total }}</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-3">
+                    <a class="mini-charts-item bgm-gray" ng-href="#/alerts/list?finalized">
+                        <div class="clearfix">
+                            <div class="chart">
+                                <div class="easy-pie main-pie"
+                                     pie-chart
+                                     track-color="rgba(255,255,255,0.2)"
+                                     scale-color="rgba(255,255,255,0.5)"
+                                     bar-color="rgba(255,255,255,0.7)"
+                                     line-width="7"
+                                     line-cap="butt"
+                                     size="80"
+                                     percent="{{ ctrl.stats.finalizedPercent}}">
+
+                                    <div class="percent">{{ ctrl.stats.finalizedPercent }}</div>
+                                </div>
+                            </div>
+                            <div class="count">
+                                <small translate>Finalized</small>
+                                <h2>{{ ctrl.stats.finalized }}</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-3">
+                    <a class="mini-charts-item bgm-blue" ng-href="#/alerts/list?finalized=false">
+                        <div class="clearfix">
+                            <div class="chart">
+                                <div class="easy-pie main-pie"
+                                     pie-chart
+                                     track-color="rgba(255,255,255,0.2)"
+                                     scale-color="rgba(255,255,255,0.5)"
+                                     bar-color="rgba(255,255,255,0.7)"
+                                     line-width="7"
+                                     line-cap="butt"
+                                     size="80"
+                                     percent="{{ ctrl.stats.activePercent }}">
+
+                                    <div class="percent">{{ ctrl.stats.activePercent }}</div>
+                                </div>
+                            </div>
+                            <div class="count">
+                                <small translate>Opened</small>
+                                <h2>{{ ctrl.stats.total - ctrl.stats.finalized }}</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-3">
+                    <a class="mini-charts-item bgm-orange" ng-href="#/alerts/list?testMode">
+                        <div class="clearfix">
+                            <div class="chart">
+                                <div class="easy-pie main-pie"
+                                     pie-chart
+                                     track-color="rgba(255,255,255,0.2)"
+                                     scale-color="rgba(255,255,255,0.5)"
+                                     bar-color="rgba(255,255,255,0.7)"
+                                     line-width="7"
+                                     line-cap="butt"
+                                     size="80"
+                                     percent="{{ ctrl.stats.testModePercent }}">
+
+                                    <div class="percent">{{ ctrl.stats.testModePercent }}</div>
+                                </div>
+                            </div>
+                            <div class="count">
+                                <small translate>Test</small>
+                                <h2>{{ ctrl.stats.testMode }}</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Categories -->
+
+            <div class="block-header">
+                <h2>{{'Categories'|translate}}
+                    <small translate>Stats for categories</small>
+                </h2>
+            </div>
+
+            <div class="pie-charts dash-widget-item" ng-repeat="(code, stats) in ctrl.stats.dictionaries.category">
+
+                <a ng-href="#/alerts/list?category={{ code }}">
+                    <div class="dash-widget-header bgm-pink">
+                        <div class="dash-widget-title">{{ code | category}}</div>
+
+                        <div class="dash-widget-chart">
+                            <div class="easy-pie main-pie"
+                                 pie-chart
+                                 track-color="rgba(255,255,255,0.2)"
+                                 scale-color="rgba(255,255,255,0.5)"
+                                 bar-color="rgba(255,255,255,0.7)"
+                                 line-width="7"
+                                 line-cap="butt"
+                                 size="65"
+                                 percent="{{ ctrl.getPercent(stats.total)}}">
+
+                                <div class="percent">{{ ctrl.getPercent(stats.total) }}</div>
+                                <div class="pie-title" translate>All alerts</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="dash-widget-content">
+
+                    <a ng-href="#/alerts/list?category={{ code }}">
+                        <small translate>All</small>
+                        <h4 class="m-0 f-400">{{ stats.total }}</h4>
+                    </a>
+
+                    <a ng-href="#/alerts/list?category={{ code }}&finalized">
+                        <small translate>Finalized</small>
+                        <h4 class="m-0 f-400">{{ stats.finalized }}</h4>
+                    </a>
+
+                    <a ng-href="#/alerts/list?category={{ code }}&finalized=false">
+                        <small translate>Opened</small>
+                        <h4 class="m-0 f-400">{{ stats.total - stats.finalized }}</h4>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- Products -->
+
+            <div class="block-header">
+                <h2>{{'Products'|translate}}
+                    <small translate>Stats for products</small>
+                </h2>
+            </div>
+
+            <div class="pie-charts dash-widget-item" ng-repeat="(code, stats) in ctrl.stats.dictionaries.product">
+
+                <a ng-href="#/alerts/list?product={{ code }}">
+                    <div class="dash-widget-header bgm-blue">
+                        <div class="dash-widget-title">{{ code | product}}</div>
+
+                        <div class="dash-widget-chart">
+                            <div class="easy-pie main-pie"
+                                 pie-chart
+                                 track-color="rgba(255,255,255,0.2)"
+                                 scale-color="rgba(255,255,255,0.5)"
+                                 bar-color="rgba(255,255,255,0.7)"
+                                 line-width="7"
+                                 line-cap="butt"
+                                 size="65"
+                                 percent="{{ ctrl.getPercent(stats.total)}}">
+
+                                <div class="percent">{{ ctrl.getPercent(stats.total) }}</div>
+                                <div class="pie-title" translate>All alerts</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="dash-widget-content">
+
+                    <a ng-href="#/alerts/list?product={{ code }}">
+                        <small translate>All</small>
+                        <h4 class="m-0 f-400">{{ stats.total }}</h4>
+                    </a>
+
+                    <a ng-href="#/alerts/list?product={{ code }}&finalized">
+                        <small translate>Finalized</small>
+                        <h4 class="m-0 f-400">{{ stats.finalized }}</h4>
+                    </a>
+
+                    <a ng-href="#/alerts/list?product={{ code }}&finalized=false">
+                        <small translate>Opened</small>
+                        <h4 class="m-0 f-400">{{ stats.total - stats.finalized }}</h4>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- Priorities -->
+
+            <div class="block-header">
+                <h2>{{'Priorities'|translate}}
+                    <small translate>Stats for priorities</small>
+                </h2>
+            </div>
+
+            <div class="pie-charts dash-widget-item" ng-repeat="(code, stats) in ctrl.stats.dictionaries.priority">
+
+                <a ng-href="#/alerts/list?priority={{ code }}">
+                    <div class="dash-widget-header bgm-indigo">
+
+                        <div class="dash-widget-title">{{ code | priority}}</div>
+
+                        <div class="dash-widget-chart">
+                            <div class="easy-pie main-pie"
+                                 pie-chart
+                                 track-color="rgba(255,255,255,0.2)"
+                                 scale-color="rgba(255,255,255,0.5)"
+                                 bar-color="rgba(255,255,255,0.7)"
+                                 line-width="7"
+                                 line-cap="butt"
+                                 size="65"
+                                 percent="{{ ctrl.getPercent(stats.total)}}">
+
+                                <div class="percent">{{ ctrl.getPercent(stats.total) }}</div>
+                                <div class="pie-title" translate>All alerts</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="dash-widget-content">
+
+                    <a ng-href="#/alerts/list?priority={{ code }}">
+                        <small translate>All</small>
+                        <h4 class="m-0 f-400">{{ stats.total }}</h4>
+                    </a>
+
+                    <a ng-href="#/alerts/list?priority={{ code }}&finalized">
+                        <small translate>Finalized</small>
+                        <h4 class="m-0 f-400">{{ stats.finalized }}</h4>
+                    </a>
+
+                    <a ng-href="#/alerts/list?priority={{ code }}&finalized=false">
+                        <small translate>Opened</small>
+                        <h4 class="m-0 f-400">{{ stats.total - stats.finalized }}</h4>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

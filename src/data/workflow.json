@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "DEFAULT",
+        "definition": "initialState: OPEN\ninitialActions:\n    - LogMessageAction\nfinalStates:\n    - RESOLVED\n    - CLOSED\nfinalActions:\n    - LogMessageFinalAction\nstates:\n   CLOSED:\n    - nextState: REOPENED\n      transitionName: REOPEN\n   IN_PROGRESS:\n    - nextState: OPEN\n      transitionName: STOP_PROGRESS\n    - nextState: CLOSED\n      transitionName: CLOSE\n      actions:\n       - LogMessageAction\n    - nextState: RESOLVED\n      transitionName: RESOLVE\n   OPEN:\n    - nextState: CLOSED\n      transitionName: CLOSE\n      actions:\n       - LogMessageAction\n      conditions:\n       - YesCondition\n       - TestUserInRoleCondition:\n          - ADMIN\n    - nextState: RESOLVED\n      transitionName: RESOLVE\n    - nextState: IN_PROGRESS\n      transitionName: START_PROGRESS\n   REOPENED:\n    - nextState: IN_PROGRESS\n      transitionName: START_PROGRESS\n    - nextState: CLOSED\n      transitionName: CLOSE\n      actions:\n       - LogMessageAction\n    - nextState: RESOLVED\n      transitionName: RESOLVE\n   RESOLVED:\n    - nextState: CLOSED\n      transitionName: CLOSE\n      actions:\n       - LogMessageAction\n    - nextState: REOPENED\n      transitionName: REOPEN\n",
+        "createdBy": null,
+        "creationDate": null,
+        "modifiedBy": null,
+        "modificationDate": null,
+        "active": true
+    }
+]

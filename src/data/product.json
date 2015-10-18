@@ -1,0 +1,18 @@
+[
+    {
+        "code": "CFD",
+        "label": "CreditApplication",
+        "metadata": [
+            "mdDtNumberRF",
+            "mdDtBooleanRF",
+            "mdDtDateRF",
+            "mdDtStringRF",
+            "mdDtTextRF"
+        ]
+    },
+    {
+        "code": "SQR",
+        "label": "WebMonitoring",
+        "metadata": []
+    }
+]

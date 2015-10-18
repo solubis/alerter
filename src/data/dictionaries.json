@@ -1,0 +1,90 @@
+{
+    "priority": [
+        {
+            "code": "40",
+            "label": "Blocker"
+        },
+        {
+            "code": "30",
+            "label": "Critical"
+        },
+        {
+            "code": "20",
+            "label": "Normal"
+        },
+        {
+            "code": "10",
+            "label": "Minor"
+        }
+    ],
+    "linkType": [
+        {
+            "code": "IS_DUPLICATED",
+            "label": "Is duplicated by"
+        },
+        {
+            "code": "DUPLICATES",
+            "label": "Duplicates"
+        },
+        {
+            "code": "IS_REFERENCED",
+            "label": "Is referenced by"
+        },
+        {
+            "code": "REFERENCES",
+            "label": "Refereces"
+        }
+    ],
+    "category": [
+        {
+            "code": "INF",
+            "label": "Informative"
+        },
+        {
+            "code": "DEC",
+            "label": "DecisionAlert"
+        },
+        {
+            "code": "ACC",
+            "label": "DecisionWithAcceptance"
+        }
+    ],
+    "workflow": [
+        {
+            "code": "1",
+            "label": "DEFAULT"
+        }
+    ],
+    "product": [
+        {
+            "code": "CFD",
+            "label": "CreditApplication"
+        },
+        {
+            "code": "SQR",
+            "label": "WebMonitoring"
+        }
+    ],
+    "state": [
+        {
+            "code": "OPEN",
+            "label": "Open"
+        },
+        {
+            "code": "IN_PROGRESS",
+            "label": "InProgress"
+        },
+        {
+            "code": "CLOSED",
+            "label": "Closed"
+        },
+        {
+            "code": "RESOLVED",
+            "label": "Resolved"
+        },
+        {
+            "code": "REOPENED",
+            "label": "Reopened"
+        }
+    ]
+}

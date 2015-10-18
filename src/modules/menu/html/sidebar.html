@@ -1,0 +1,72 @@
+<aside id="sidebar" ng-controller="MenuController as ctrl">
+    <div class="sidebar-inner">
+        <div class="si-inner">
+            <div class="profile-menu sub-menu">
+                <a href="">
+                    <div class="profile-pic">
+                        <img src="images/avatar.jpg" alt="">
+                    </div>
+
+                    <div class="profile-info">
+                        {{ ctrl.userFullName }}
+
+                        <i class="md md-arrow-drop-down"></i>
+                    </div>
+                </a>
+
+                <ul class="main-menu">
+                    <li>
+                        <a href="" ng-click="ctrl.showProfile()"><i class="md md-person"></i> {{'Profile'|translate}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="ctrl.showSettings()"><i class="md md-settings"></i>
+                            {{'Permissions'|translate}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="ctrl.logout()"><i class="md md-history"></i> {{'Logout'|translate}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="main-menu">
+                <li><a href ng-click="ctrl.showHelp()"><i class="md md-help"></i> {{'Help'|translate}}
+                </a></li>
+
+                <li authorize="ALERTER_ALERT_LIST">
+                    <a ui-sref="dashboard"><i class="md md-filter-list"></i> {{'Predefined filters'|translate}}</a>
+                </li>
+
+                <li authorize="ALERTER_ALERT_LIST"><a ui-sref="alerts"><i class="md md-today"></i>
+                    {{'Alerts'|translate}}
+                </a></li>
+
+                <li class="sub-menu active toggled" authorize="ALERTER_ADMIN">
+                    <a href=""><i class="md md-settings"></i> {{'Administration'|translate}}
+                    </a>
+                    <ul>
+                        <li authorize="ALERTER_ADMIN_MANAGE_WORKFLOW"><a ui-sref="workflow">{{'Workflows'|translate}}
+                        </a></li>
+                        <li authorize="ALERTER_ADMIN_MANAGE_DYNAMIC"><a ui-sref="metadata">{{'Dynamic fields'|translate}}
+                        </a></li>
+                        <li authorize="ALERTER_ADMIN_MANAGE_PRODUCT"><a ui-sref="product">{{'Products'|translate}}
+                        </a></li>
+                        <li authorize="ALERTER_ADMIN_MANAGE_CATEGORY"><a ui-sref="category">{{'Categories'|translate}}
+                        </a></li>
+                        <li authorize="ALERTER_ADMIN_MANAGE_TAG"><a ui-sref="tag">{{'Tags'|translate}}
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="footer-menu">
+                <li>
+                    <div sidebar-switch></div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</aside>

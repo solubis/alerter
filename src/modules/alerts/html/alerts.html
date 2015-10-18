@@ -1,0 +1,181 @@
+<div class="alert-list">
+
+    <div class="toolbar">
+        <h2 ng-if="!ctrl.selectionMode" translate>Alert list</h2>
+
+        <ul class="actions selected" ng-if="ctrl.selectionMode">
+            <li><h2> {{'For'|translate}} {{ ctrl.selectionCount }} {{'chosen'|translate}} <i class="md md-done"></i></h2></li>
+
+            <li>
+                <a href="" ng-click="ctrl.selectAll(false)" tooltip="{{'Cancel selection'|translate}}" tooltip-placement="bottom">
+                    <i class="md md-close"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href=""
+                   ng-disabled="ctrl.productionCount || !authorize('ALERTER_ALERT_REMOVE_TEST')"
+                   ng-click="ctrl.productionCount || !authorize('ALERTER_ALERT_REMOVE_TEST') || ctrl.removeSelected()"
+                   tooltip="{{'Remove test alerts'|translate}}"
+                   tooltip-placement="bottom">
+
+                    <i class="md md-delete"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="" ng-click="ctrl.editSelected()"
+                   tooltip="{{'Edit'|translate}}"
+                   tooltip-placement="bottom">
+                    <i class="md md-edit"></i>
+                </a>
+            </li>
+
+        </ul>
+
+        <ul class="actions" ng-if="!ctrl.selectionMode">
+            <li>
+                <a href="" ng-click="ctrl.reload()" tooltip="{{'Refresh data'|translate}}" tooltip-placement="bottom">
+                    <i class="md md-refresh"></i>
+                </a>
+            </li>
+            <li>
+                <a href="" ng-click="ctrl.sidebar.toggle()" tooltip="{{'Change filter'|translate}}" tooltip-placement="bottom">
+                    <i class="md md-filter-list"></i>
+                </a>
+            </li>
+            <li>
+                <a href="" ng-click="ctrl.clearFilter()"
+                   tooltip="{{ 'Clear filter' | translate}}"
+                   tooltip-placement="bottom"
+                   tooltip-append-to-body="true">
+
+                    <i class="md md-delete"></i>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="content">
+
+        <div class="card">
+
+            <div class="card-header" ng-if="!ctrl.isStarting">
+
+                <h2 ng-if="!ctrl.filterDescription">
+                    <small ng-if="ctrl.total > 0">{{ctrl.firstRecordNumber}}-{{ctrl.lastRecordNumber}} {{ 'of'| translate }}</small>
+                    <small>{{ ctrl.total }} {{ 'records' | translate }}. &nbsp;</small>
+                    <small translate>Choose filter using button </small>
+                    <a href="" ng-click="ctrl.sidebar.toggle()"><i class="md md-filter-list"></i></a>
+                </h2>
+                <h2 ng-if="ctrl.filterDescription">
+                    <small ng-if="ctrl.total > 0">{{ctrl.firstRecordNumber}}-{{ctrl.lastRecordNumber}} {{ 'of'| translate }} </small>
+                    <small>{{ ctrl.total }} {{ 'records for filter' | translate }} : &nbsp;</small>
+                    <small ng-bind-html="ctrl.filterDescription"></small>
+                </h2>
+
+            </div>
+
+            <div class="card-body">
+
+                <table ng-table="ctrl.tableParams"
+                       class="table table-striped table-hover ng-table"
+                       ng-if="ctrl.data.length > 0">
+
+                    <thead>
+                    <tr>
+                        <th style="width: 50px;">
+                            <label class="checkbox">
+                                <input name="select" type="checkbox"
+                                       ng-click="ctrl.selectAll(ctrl.allSelected)"
+                                       ng-model="ctrl.allSelected">
+                                <i class="input-helper"></i>
+                            </label>
+                        </th>
+                        <th ng-table-sort-header="id">{{'Id'|translate}}</th>
+                        <th ng-table-sort-header="title">{{'Title'|translate}}</th>
+                        <th ng-table-sort-header="category" class="hidden-xxs">{{'Category'|translate}}</th>
+                        <th ng-table-sort-header="priority">
+                            <i tooltip="{{'Priority'|translate}}" tooltip-append-to-body="true" class="md md-flag"></i>
+                        </th>
+                        <th ng-table-sort-header="product" class="hidden-xxs">{{'Product'|translate}}</th>
+                        <th ng-table-sort-header="state">{{'State'|translate}}</th>
+                        <th class="hidden-xs hidden-sm">{{'Assignee'|translate}}</th>
+                        <th ng-table-sort-header="creationDate" class="hidden-xs hidden-sm">{{'Creation date'|translate}}</th>
+                        <th ng-table-sort-header="modificationDate" class="hidden-xs hidden-sm">{{'Modification date'|translate}}</th>
+
+                        <th authorize="ALERTER_ALERT_EDIT_FOREIGN, ALERTER_ALERT_EDIT_OWN, ALERTER_ALERT_REMOVE_TEST">
+                            {{'Actions'|translate}}
+                        </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr ng-repeat="alert in ctrl.data track by alert.id">
+                        <td>
+                            <div class="row-stripe" ng-if="alert.testMode"></div>
+                            <div class="checkbox">
+                                <input
+                                    name="select"
+                                    type="checkbox"
+                                    ng-model="alert.isSelected"
+                                    ng-change="ctrl.onSelectionChange()">
+                                <i class="input-helper"></i>
+                            </div>
+                        </td>
+
+                        <td>
+                            <a ng-href="#/alerts/view/{{ ::alert.id }}">{{::alert.id }}</a>
+                        </td>
+
+                        <td class="max-w-m">
+                            <a ng-href="#/alerts/view/{{ ::alert.id }}">{{alert.title }}</a>
+                        </td>
+
+                        <td class="hidden-xxs">{{ ::alert.category | category }}</td>
+
+                        <td><img tooltip="{{ alert.priority | priority}}"
+                                 tooltip-append-to-body="true"
+                                 ng-src="images/priority/{{ alert.priority | priorityIcon }}.png"></td>
+                        <td class="hidden-xxs">{{ ::alert.product | product }}</td>
+
+                        <td><span class="label label-{{alert.finalized | stateClass }}">{{ alert.state | state }}</span>
+                        </td>
+
+                        <td class="hidden-xs hidden-sm max-w-m two-lines"><span>{{ alert.assignee.userFullName }}</span>
+                            <small>{{ alert.assignee.hierarchyName }} / {{ alert.assignee.groupName }}</small>
+                        </td>
+
+                        <td class="hidden-xs hidden-sm">{{ ::alert.creationDate | dateFormat }}</td>
+
+                        <td class="hidden-xs hidden-sm">{{ alert.modificationDate | dateFormat }}</td>
+
+                        <td authorize="ALERTER_ALERT_EDIT_FOREIGN, ALERTER_ALERT_EDIT_OWN, ALERTER_ALERT_REMOVE_TEST">
+                            <button type="button"
+                                    class="btn btn-icon list-command"
+                                    ng-click="ctrl.edit(alert)"
+                                    ng-if="ctrl.hasPermissionToEdit(alert)">
+                                <i class="md md-edit"></i>
+                            </button>
+
+                            <button ng-if="alert.testMode"
+                                    type="button"
+                                    class="btn btn-icon list-command"
+                                    ng-click="ctrl.remove(alert)"
+                                    authorize="ALERTER_ALERT_REMOVE_TEST">
+                                <i class="md md-delete"></i></button>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+
+                <h4 ng-if="ctrl.isLoading" class="loading" translate>Loading data...</h4>
+                <h4 ng-if="!ctrl.isLoading && (!ctrl.data ||ctrl.data.length <= 0)" class="loading" translate>No data</h4>
+
+            </div>
+        </div>
+    </div>
+</div>

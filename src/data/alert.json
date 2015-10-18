@@ -1,0 +1,3120 @@
+{
+    "content": [
+        {
+            "id": 100,
+            "creationDate": 1429678641.837,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.837,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 100",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 100",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.839
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.839
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 99,
+            "creationDate": 1429678641.832,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.832,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 99",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 99",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.834
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.833
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 98,
+            "creationDate": 1429678641.827,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.827,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 98",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 98",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.829
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.828
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 97,
+            "creationDate": 1429678641.823,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.823,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 97",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 97",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.825
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.824
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 96,
+            "creationDate": 1429678641.819,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.819,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 96",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 96",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.821
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.82
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 95,
+            "creationDate": 1429678641.815,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.815,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 95",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 95",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.817
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.816
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 94,
+            "creationDate": 1429678641.81,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.81,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 94",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 94",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.812
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.811
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 93,
+            "creationDate": 1429678641.806,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.806,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 93",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 93",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.807
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.807
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 92,
+            "creationDate": 1429678641.801,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.801,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 92",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 92",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.803
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.802
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 91,
+            "creationDate": 1429678641.796,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.796,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 91",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 91",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.798
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.797
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 90,
+            "creationDate": 1429678641.79,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.79,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 90",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 90",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.792
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.792
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 89,
+            "creationDate": 1429678641.784,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.784,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 89",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 89",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.786
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.785
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 88,
+            "creationDate": 1429678641.778,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.778,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 88",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 88",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.78
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.779
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 87,
+            "creationDate": 1429678641.773,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.773,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 87",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 87",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.775
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.774
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 86,
+            "creationDate": 1429678641.767,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.767,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 86",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 86",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.77
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.769
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 85,
+            "creationDate": 1429678641.758,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.758,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 85",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 85",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.76
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.759
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 84,
+            "creationDate": 1429678641.753,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.753,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 84",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 84",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.755
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.754
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 83,
+            "creationDate": 1429678641.749,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.749,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 83",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 83",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.75
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.75
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 82,
+            "creationDate": 1429678641.745,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.745,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 82",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 82",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.746
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.746
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 81,
+            "creationDate": 1429678641.74,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.74,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 81",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 81",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.742
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.741
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 80,
+            "creationDate": 1429678641.735,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.735,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 80",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 80",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.737
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.737
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 79,
+            "creationDate": 1429678641.732,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.732,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 79",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 79",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.733
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.733
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 78,
+            "creationDate": 1429678641.727,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.727,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 78",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 78",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.729
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.728
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 77,
+            "creationDate": 1429678641.723,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.723,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 77",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 77",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.725
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.724
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 76,
+            "creationDate": 1429678641.719,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.719,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 76",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 76",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.72
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.72
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 75,
+            "creationDate": 1429678641.714,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.714,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 75",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 75",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.716
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.715
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 74,
+            "creationDate": 1429678641.71,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.71,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 74",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 74",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.712
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.711
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 73,
+            "creationDate": 1429678641.706,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.706,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 73",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 73",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.707
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.707
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 72,
+            "creationDate": 1429678641.701,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.701,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 72",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 72",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.703
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.702
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 71,
+            "creationDate": 1429678641.697,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.697,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 71",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 71",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.699
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.698
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 70,
+            "creationDate": 1429678641.693,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.693,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 70",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 70",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.695
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.694
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 69,
+            "creationDate": 1429678641.688,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.688,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 69",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 69",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.69
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.689
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 68,
+            "creationDate": 1429678641.683,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.683,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 68",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 68",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.685
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.684
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 67,
+            "creationDate": 1429678641.679,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.679,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 67",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 67",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.681
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.68
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 66,
+            "creationDate": 1429678641.674,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.674,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 66",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 66",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.676
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.675
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 65,
+            "creationDate": 1429678641.669,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.669,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 65",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 65",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.671
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.671
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 64,
+            "creationDate": 1429678641.665,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.665,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 64",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 64",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.667
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.666
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 63,
+            "creationDate": 1429678641.66,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.66,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 63",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 63",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.662
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.661
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 62,
+            "creationDate": 1429678641.654,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.654,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 62",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 62",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.656
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.655
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 61,
+            "creationDate": 1429678641.648,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.648,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 61",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 61",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.65
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.649
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 60,
+            "creationDate": 1429678641.642,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.642,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 60",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 60",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.644
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.644
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 59,
+            "creationDate": 1429678641.636,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.636,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 59",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 59",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.638
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.638
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 58,
+            "creationDate": 1429678641.632,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.632,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 58",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 58",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.634
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.633
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 57,
+            "creationDate": 1429678641.627,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.627,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 57",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 57",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.629
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.628
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 56,
+            "creationDate": 1429678641.622,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.622,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 56",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 56",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.624
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.623
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 55,
+            "creationDate": 1429678641.618,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.618,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 55",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 55",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.62
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.619
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 54,
+            "creationDate": 1429678641.613,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.613,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 54",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 54",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.615
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.615
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 53,
+            "creationDate": 1429678641.609,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.609,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 53",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 53",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.611
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.61
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 52,
+            "creationDate": 1429678641.605,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.605,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 52",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 52",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.607
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.606
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 51,
+            "creationDate": 1429678641.6,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.6,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 51",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 51",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.602
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.602
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 50,
+            "creationDate": 1429678641.594,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.594,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 50",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 50",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.597
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.596
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 49,
+            "creationDate": 1429678641.589,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.589,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 49",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 49",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.591
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.59
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 48,
+            "creationDate": 1429678641.584,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.584,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 48",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 48",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.586
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.585
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 47,
+            "creationDate": 1429678641.58,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.58,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 47",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 47",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.581
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.581
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 46,
+            "creationDate": 1429678641.574,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.574,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 46",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 46",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.577
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.576
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 45,
+            "creationDate": 1429678641.569,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.569,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 45",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 45",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.571
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.57
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 44,
+            "creationDate": 1429678641.565,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.565,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 44",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 44",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.567
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.566
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 43,
+            "creationDate": 1429678641.558,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.558,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 43",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 43",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.561
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.56
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 42,
+            "creationDate": 1429678641.552,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.552,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 42",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 42",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.554
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.553
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 41,
+            "creationDate": 1429678641.547,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.547,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 41",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 41",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.549
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.549
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 40,
+            "creationDate": 1429678641.542,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.542,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 40",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 40",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.545
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.544
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 39,
+            "creationDate": 1429678641.538,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.538,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 39",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 39",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.54
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.539
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 38,
+            "creationDate": 1429678641.533,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.533,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 38",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 38",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.535
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.535
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 37,
+            "creationDate": 1429678641.527,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.527,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 37",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 37",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.529
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.528
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 36,
+            "creationDate": 1429678641.522,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.522,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 36",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 36",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.525
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.524
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 35,
+            "creationDate": 1429678641.517,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.517,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 35",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 35",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.519
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.518
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 34,
+            "creationDate": 1429678641.512,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.512,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 34",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 34",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.514
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.514
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 33,
+            "creationDate": 1429678641.508,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.508,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 33",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 33",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.51
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.509
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 32,
+            "creationDate": 1429678641.502,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.502,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 32",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 32",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.504
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.504
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 31,
+            "creationDate": 1429678641.496,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.496,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 31",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 31",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.499
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.498
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 30,
+            "creationDate": 1429678641.491,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.491,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 30",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 30",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.493
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.492
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 29,
+            "creationDate": 1429678641.486,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.486,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 29",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 29",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.488
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.487
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 28,
+            "creationDate": 1429678641.48,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.48,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 28",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 28",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.483
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.482
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 27,
+            "creationDate": 1429678641.475,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.475,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 27",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 27",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.477
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.477
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 26,
+            "creationDate": 1429678641.469,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.469,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 26",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 26",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.472
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.471
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 25,
+            "creationDate": 1429678641.463,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.463,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 25",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 25",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.466
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.464
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 24,
+            "creationDate": 1429678641.457,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.457,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 24",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 24",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.459
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.458
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 23,
+            "creationDate": 1429678641.45,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.45,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 23",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 23",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.453
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.452
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 22,
+            "creationDate": 1429678641.443,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.443,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 22",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 22",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.446
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.445
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 21,
+            "creationDate": 1429678641.438,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.438,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 21",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 21",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.44
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.439
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 20,
+            "creationDate": 1429678641.432,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.432,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 20",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 20",
+            "comments": [
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.434
+                },
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.434
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 19,
+            "creationDate": 1429678641.427,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.427,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 19",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 19",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.429
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.428
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 18,
+            "creationDate": 1429678641.421,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.421,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 18",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 18",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.424
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.423
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 17,
+            "creationDate": 1429678641.414,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.414,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 17",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 17",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.417
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.415
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 16,
+            "creationDate": 1429678641.406,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.406,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 16",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 16",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.409
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.408
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 15,
+            "creationDate": 1429678641.395,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.395,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 15",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 15",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.398
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.397
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 14,
+            "creationDate": 1429678641.388,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.388,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "CFD",
+            "title": "Some title 14",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 14",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.391
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.39
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 13,
+            "creationDate": 1429678641.382,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.382,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 13",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 13",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.384
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.383
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 12,
+            "creationDate": 1429678641.376,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.376,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 12",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 12",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.378
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.377
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 11,
+            "creationDate": 1429678641.37,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.37,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 11",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 11",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.373
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.372
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 10,
+            "creationDate": 1429678641.361,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.361,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 10",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 10",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.365
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.363
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 9,
+            "creationDate": 1429678641.355,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.355,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "CFD",
+            "title": "Some title 9",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 9",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.358
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.357
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 8,
+            "creationDate": 1429678641.348,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.348,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "CFD",
+            "title": "Some title 8",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 8",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.351
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.35
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 7,
+            "creationDate": 1429678641.339,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.339,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 7",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 7",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.342
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.341
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 6,
+            "creationDate": 1429678641.331,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.331,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 6",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 6",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.334
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.333
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 5,
+            "creationDate": 1429678641.323,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.323,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "ACC",
+            "product": "SQR",
+            "title": "Some title 5",
+            "priority": "30",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 5",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.327
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.326
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 4,
+            "creationDate": 1429678641.315,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.315,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 4",
+            "priority": "10",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 4",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.318
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.317
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 3,
+            "creationDate": 1429678641.308,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.308,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 3",
+            "priority": "20",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 3",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.311
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.31
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 2,
+            "creationDate": 1429678641.299,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.299,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "DEC",
+            "product": "SQR",
+            "title": "Some title 2",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 2",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.303
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.301
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        },
+        {
+            "id": 1,
+            "creationDate": 1429678641.236,
+            "createdBy": "John Snow",
+            "modificationDate": 1429678641.236,
+            "modifiedBy": "John Snow",
+            "state": "OPEN",
+            "category": "INF",
+            "product": "SQR",
+            "title": "Some title 1",
+            "priority": "40",
+            "assignee": "Jan Kowalski",
+            "description": "Some description 1",
+            "comments": [
+                {
+                    "text": "Some comment  2",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.283
+                },
+                {
+                    "text": "Some comment  1",
+                    "createdBy": "John Snow",
+                    "creationDate": 1429678641.281
+                }
+            ],
+            "availableTransitions": [
+                "CLOSE",
+                "RESOLVE",
+                "START_PROGRESS"
+            ]
+        }
+    ],
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 100,
+    "size": 100,
+    "number": 0,
+    "sort": [
+        {
+            "direction": "DESC",
+            "property": "creationDate",
+            "ignoreCase": false,
+            "nullHandling": "NATIVE",
+            "ascending": false
+        }
+    ],
+    "first": true,
+    "numberOfElements": 100
+}

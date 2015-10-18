@@ -1,0 +1,343 @@
+// Alert Search component
+
+.alert-found-dropdown {
+
+    .match-title {
+        border-bottom: 1px solid @gray-light;
+        font-weight: bold;
+        padding: 3px 10px 3px;
+    }
+
+    .match-list {
+        margin-bottom: 5px;
+        dd, dt {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        dt {
+            padding-top: 5px;
+        }
+
+        dd {
+            line-height: 1em;
+        }
+    }
+
+}
+
+.alert-search {
+    .dropdown-menu {
+        .transition-duration(0ms);
+    }
+}
+
+// Alert List
+
+.alert-list {
+    height: 100%;
+    margin-bottom: 20px;
+
+    .card-header {
+        background-color: @gray-lightest;
+        padding: 18px;
+        i {
+            vertical-align: top;
+            font-size: 13px;
+        }
+        h2 {
+            small {
+                display: inline;
+            }
+        }
+    }
+
+    .toolbar {
+        .actions {
+            position: relative;
+            float: right;
+            padding-right: 45px;
+        }
+
+        .actions.selected {
+            float:left;
+            padding-left: 25px;
+
+            h2 {
+                font-size: 12px;
+                color: @gray;
+                margin: 0;
+                padding-right: 20px;
+                font-weight: 400;
+                text-transform: uppercase;
+
+                i {
+                    color: @gray;
+                    font-size: 1.4em;
+                }
+            }
+
+        }
+    }
+
+    .filter {
+        @media screen and (max-width: 991px) {
+            padding-top: 20px;
+        }
+    }
+
+    .form-group label {
+        margin-bottom: 3px;
+    }
+
+    .multi-select {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .filter .multiSelect > button {
+        width: 100%;
+        text-transform: none;
+        padding: 6px 0;
+        box-shadow: none !important;
+        border: 1px @gray-lighter solid;
+    }
+
+    .filter-button {
+        margin-top: 21px;
+    }
+
+    .table > thead > tr > th:first-child, .table > tbody > tr > th:first-child, .table > tfoot > tr > th:first-child, .table > thead > tr > td:first-child, .table > tbody > tr > td:first-child, .table > tfoot > tr > td:first-child {
+        padding-left: 20px;
+    }
+
+    .table {
+        tr {
+            height: 35px;
+            .checkbox{
+                padding-bottom: 2px;
+            }
+        }
+    }
+
+    td > .checkbox {
+        top: -8px;
+    }
+
+    th > .checkbox {
+        top: -16px;
+    }
+}
+
+// Alert View
+
+.alert-view {
+
+    .card-body {
+        padding: 0 20px;
+    }
+
+    table.alert-details {
+        td {
+            line-height: 3rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:first-child {
+                min-width: 150px;
+                text-align: right;
+                font-weight: bold;
+            }
+
+            &:not(:first-child) {
+                padding-left: 20px;
+                text-align: left;
+            }
+
+            &.wrap-words {
+                white-space: pre-line;
+                line-height: 1;
+            }
+        }
+
+        span.label {
+            float: left;
+            margin-top: 2px;
+        }
+    }
+
+    .description,
+    pre.prettyprint {
+        padding: 10px;
+        background-color: white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.alert-edit {
+}
+
+.alert-attach {
+
+    .modal-header {
+        .spinner {
+            display: inline-block;
+            position: relative;
+            float: right;
+            top: -25px;
+        }
+    }
+
+    .fileinput {
+        width: 100%;
+    }
+}
+
+.alert-audit {
+    .table > tbody > tr > td {
+        vertical-align: top;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.alert-filters {
+
+    height: 100%;
+
+    .filter-button {
+        margin-top: 30px;
+    }
+
+    .toolbar {
+        .dropdown-menu {
+            min-width: 220px;
+        }
+    }
+
+    .actions {
+        left: 25px;
+        right: auto;
+    }
+
+    .fields {
+        position: relative;
+        top: -20px;
+
+        .multiSelect {
+            button:not(.helperButton) {
+                width: 100%;
+                text-transform: none;
+                padding: 6px 0;
+                box-shadow: none !important;
+                border: 1px @gray-lighter solid;
+            }
+        }
+    }
+
+    .lv-body {
+        max-height: 500px;
+        overflow: auto;
+
+        .lv-item {
+            padding: 5px 15px 5px 10px !important;
+
+            .md {
+                vertical-align: bottom;
+            }
+        }
+
+        .loading {
+            margin-top: 20px;
+        }
+    }
+
+    .search-item {
+        position: relative;
+
+        .col {
+            width: 50%;
+            padding: 0;
+            float: left;
+
+            .form-group {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .search-field {
+        display: inline-block;
+        padding-right: 0px;
+        width: 100%;
+        padding-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .search-field-remove {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: @gray-light;
+
+        & > i {
+            .transition(color);
+            .transition-duration(1300ms);
+            color: #adadad;
+            font-size: 16px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            & > i {
+                color: #000;
+            }
+        }
+    }
+}
+
+td.two-lines {
+    line-height: 1em !important;
+
+    small {
+        display: block;
+        color: lighten(@gray, 15%);
+    }
+}
+
+.test-mode {
+    margin: 20px 0 20px 0;
+
+    .toggle-switch {
+        label.ts-label.after {
+            margin-left: 10px;
+            font-weight: normal;
+        }
+
+        label.ts-label.before {
+            margin-left: 0;
+            margin-right: 5px;
+            color: black;
+            width: 100px;
+        }
+
+        &.active {
+            label.ts-label.after {
+                font-weight:bold;
+            }
+
+            label.ts-label.before {
+                font-weight:normal;
+                color: #999999;
+            }
+        }
+    }
+}

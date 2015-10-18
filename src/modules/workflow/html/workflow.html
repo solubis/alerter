@@ -1,0 +1,79 @@
+<div class="workflow">
+
+    <div class="toolbar">
+        <h2 translate>Workflows</h2>
+
+        <div class="buttons">
+            <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary" ng-click="ctrl.open()"><i class="md md-add-circle"></i>
+                    {{'Add'|translate}} {{'workflow'|translate}}
+
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <ul class="actions">
+                    <li>
+                        <a href tooltip="{{'Add'|translate}} {{'workflow'|translate}}" tooltip-placement="bottom" ng-click="ctrl.open()">
+                            <i class="md md-add-circle"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="card-body">
+
+                    <table ng-table="ctrl.tableParams" class="table table-striped table-hover">
+                        <thead>
+
+                        <tr>
+                            <th>Id</th>
+                            <th translate>Name</th>
+                            <th translate>Modification date</th>
+                            <th translate>Active</translate>
+                            <th translate>Actions</th>
+                        </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                        <tr ng-repeat="workflow in ctrl.data track by $index">
+                            <td><a href ng-click="ctrl.open(workflow)">{{ workflow.id }}</a></td>
+                            <td><a href ng-click="ctrl.open(workflow)">{{ workflow.name }}</a></td>
+                            <td>{{ workflow.modificationDate | dateFormat }}</td>
+                            <td><i ng-if="workflow.active" class="md md-done"></i></td>
+                            <td>
+                                <button type="button"
+                                        class="btn btn-icon command-edit"
+                                        ng-click="ctrl.open(workflow)">
+                                    <span class="md md-edit"></span>
+                                </button>
+                                <button type="button"
+                                        class="btn btn-icon command-delete"
+                                        ng-click="ctrl.remove(workflow)">
+                                    <span class="md md-delete"></span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        </tbody>
+
+                    </table>
+
+                    <h4 ng-if="ctrl.isLoading"  class="loading" translate>Loading data...</h4>
+                    <h4 ng-if="!ctrl.isLoading && (!ctrl.data ||ctrl.data.length <= 0)" class="loading" translate>No data</h4>
+
+            </div>
+        </div>
+
+    </div>
+</div>

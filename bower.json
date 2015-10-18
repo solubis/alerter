@@ -1,0 +1,31 @@
+{
+    "name": "Alerter",
+    "version": "1.0.0-SNAPSHOT.20158301428",
+    "authors": [
+        "Jurek Błaszczyk"
+    ],
+    "description": "IQ Fraud Console",
+    "license": "Unlicense",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "lib",
+        "test",
+        "tests",
+        "pages",
+        "index.html",
+        "/js"
+    ],
+    "dependencies": {
+        "angular-drag-and-drop-lists": "1.x",
+        "angular-ui-ace": "bower",
+        "core": "git@code.impaqgroup.com:fds-components/core.git#develop",
+        "ui": "git@code.impaqgroup.com:fds-components/ui.git#develop",
+        "ng-tags-input": "3.x"
+    },
+    "devDependencies": {
+        "angular-mocks": "1.4.x",
+        "system.js": "*",
+        "jasmine-jquery": "2.x"
+    }
+}

@@ -1,0 +1,53 @@
+<form name="form" class="alert-action" ng-escape="$close()">
+
+    <div class="modal-header">
+        <h4 class="modal-title">{{ ctrl.title | translate}}</h4>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="form-group">
+                    <label translate>Assignee</label>
+
+                    <div select-organisation="ctrl.organisation"
+                         name="assignee"
+                         required
+                         required-selection="hierarchyId,groupId"
+                         ng-model="ctrl.data.assignee">
+                    </div>
+
+                    <div class="error-message" ng-show="form.assignee.$dirty && form.assignee.$invalid" translate>
+                        Choose at least hierarchy and group
+                    </div>
+                    <div class="error-message"
+                         ng-if="form.assignee.$dirty && !form.assignee.$invalid && foreignAssignee " translate>
+                        Current assignee is outside your privileged groups. You will loose access to it after you save it
+                    </div>
+                </div>
+
+                <div class="form-group" authorize="ALERTER_ALERT_ADD_COMMENT">
+                    <label translate>Comment</label>
+                    <textarea class="form-control"
+                              autosize
+                              placeholder="{{'Enter comment'|translate}}"
+                              ng-model="ctrl.comment"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <input type="button" class="btn btn-link"
+               value="{{'Cancel'|translate}}"
+               ng-click="$close()">
+
+        <input type="submit"
+               value="{{ctrl.acceptButtonLabel | translate}}"
+               class="btn btn-primary"
+               ng-click="ctrl.accept()"
+               ng-disabled="form.$invalid || form.$pristine">
+    </div>
+
+</form>

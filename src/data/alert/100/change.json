@@ -1,0 +1,19 @@
+{
+    "content": [],
+    "last": true,
+    "totalPages": 0,
+    "totalElements": 0,
+    "size": 10,
+    "number": 0,
+    "sort": [
+        {
+            "direction": "DESC",
+            "property": "date",
+            "ignoreCase": false,
+            "nullHandling": "NATIVE",
+            "ascending": false
+        }
+    ],
+    "first": true,
+    "numberOfElements": 0
+}

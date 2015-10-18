@@ -1,0 +1,65 @@
+<form role="form" novalidate name="form" class="dictionary-edit" ng-escape="$close()">
+
+    <div class="modal-header">
+        <h4 class="modal-title" translate>Tag</h4>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="form-group">
+            <label translate>Code</label>
+            <input class="form-control"
+                   name="code"
+                   validate-code
+                   maxlength="16"
+                   autofocus
+                   focus-if="ctrl.isNew"
+                   ng-required="true"
+                   ng-minlength="3"
+                   ng-maxlength="16"
+                   ng-disabled = "!ctrl.isNew"
+                   placeholder="{{'Enter code'|translate}}"
+                   ng-model="ctrl.item.code"/>
+
+            <div class="error-message"
+                 ng-show="form.code.$dirty && form.code.$invalid" translate>
+                Code is required
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label translate>Label</label>
+            <input class="form-control"
+                   name="label"
+                   maxlength="32"
+                   focus-if="!ctrl.isNew"
+                   ng-required="true"
+                   ng-minlength="3"
+                   ng-maxlength="32"
+                   placeholder="{{'Enter label'|translate}}"
+                   ng-model="ctrl.item.label"/>
+
+            <div class="error-message"
+                 ng-show="form.label.$dirty && form.label.$invalid" translate>
+                Label is required (3-32 characters)
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <input type="button"
+               class="btn btn-link"
+               value="{{'Cancel'|translate}}"
+               ng-click="$close()">
+
+        <input type="submit"
+               class="btn btn-primary"
+               value="{{'Save'|translate}}"
+               ng-disabled="form.$invalid || form.$pristine"
+               ng-click="ctrl.saveChanges(form)">
+    </div>
+
+</form>

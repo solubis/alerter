@@ -1,0 +1,49 @@
+<header id="header" ng-controller="MenuController as ctrl">
+    <ul class="header-inner">
+        <li id="sidebar-trigger" data-trigger="#sidebar">
+            <div class="line-wrap">
+                <div class="line top"></div>
+                <div class="line center"></div>
+                <div class="line bottom"></div>
+            </div>
+        </li>
+
+        <li class="logo hidden-xxs">
+            <a href="#">Alerter
+                <span class="version hidden-xs" ng-if="$version"> v{{ $version }} (srv: {{ $restVersion }})</span>
+            </a>
+        </li>
+
+        <li class="pull-right">
+            <ul class="top-menu">
+                <li class="dropdown" ng-include="'launcher.html'"></li>
+            </ul>
+        </li>
+
+        <li class="pull-right">
+            <ul class="top-menu">
+                <li id="top-search">
+                    <a class="tm-search" href=""></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div id="top-search-wrap" class="alert-search">
+        <input alert-search
+               maxlength="15"
+               ng-enter="ctrl.gotoAlertDetails(ctrl.foundAlertID)"
+               ng-model="ctrl.foundAlertID">
+        <i id="top-search-close">×</i>
+    </div>
+
+    <button
+        class="btn btn-danger btn-float"
+        tooltip="{{'Create alert'|translate}}"
+        tooltip-placement="bottom"
+        authorize="ALERTER_ALERT_CREATE"
+        ng-click="ctrl.addAlert()">
+        <i class="md md-add"></i>
+    </button>
+
+</header>

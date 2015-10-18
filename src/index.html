@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1">
+        <meta name="description"
+              content="">
+        <meta name="author"
+              content="">
+
+        <title>IMPAQ Alerter</title>
+
+        <!-- build:css css/app.min.css -->
+        <link rel="stylesheet"
+              href="styles/app.css">
+        <!-- /build -->
+
+    </head>
+
+    <body>
+
+        <toaster></toaster>
+
+        <!--  Navigation  -->
+        <div ng-include="'modules/menu/html/topbar.html'"
+              ng-if="isAuthenticated"></div>
+        <div ng-include="'modules/menu/html/sidebar.html'"
+              ng-if="isAuthenticated"></div>
+
+        <!--  Main Container  -->
+        <section class="main"
+              id="content"
+              ng-if="isAuthenticated">
+            <div ui-view
+                  class="container"></div>
+        </section>
+
+        <!--  Config and i18n  -->
+        <script src="config.js"></script>
+        <script src="i18n.js"></script>
+
+        <!--  Libraries  -->
+        <!-- build:js js/vendor.min.js -->
+        <script src="../build/vendor.js"></script>
+        <!-- /build -->
+        <!-- build:js js/ui.min.js -->
+        <script src="../lib/ui/dist/js/ui.js"></script>
+        <!-- /build -->
+        <!-- build:js js/core.min.js -->
+        <script src="../lib/core/dist/js/core.js"></script>
+        <!-- /build -->
+
+        <!-- Application Modules -->
+        <!-- build:js js/html.min.js -->
+        <script src="modules/modules.html.js"></script>
+        <!-- /build -->
+        <!-- build:js js/app.min.js -->
+        <script src="../lib/system.js/dist/system.js"></script>
+        <script src="./system.cfg.js"
+              type="text/javascript"></script>
+        <script>
+            System.import('app').catch(console.error.bind(console));
+
+        </script>
+        <!-- /build -->
+
+    </body>
+
+</html>

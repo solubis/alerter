@@ -1,0 +1,46 @@
+{
+    "id": 100,
+    "creationDate": 1437250255.964000000,
+    "createdBy": "John Snow",
+    "modificationDate": 1437250255.964000000,
+    "modifiedBy": "John Snow",
+    "state": "OPEN",
+    "category": "INF",
+    "product": "CFD",
+    "title": "Some title 100",
+    "priority": "40",
+    "assignee": {
+        "group": "Javascript",
+        "hierarchy": "Warszawa",
+        "user": "Stefan Kizior"
+    },
+    "description": "Some description 100",
+    "comments": [
+        {
+            "text": "Some comment  2",
+            "createdBy": "John Snow",
+            "creationDate": 1437250255.968000000
+        },
+        {
+            "text": "Some comment  1",
+            "createdBy": "John Snow",
+            "creationDate": 1437250255.967000000
+        }
+    ],
+    "attachments": [],
+    "availableTransitions": [
+        "CLOSE",
+        "RESOLVE",
+        "START_PROGRESS"
+    ],
+    "linkedAlerts": [],
+    "testMode": false,
+    "closed": false,
+    "extras": {
+        "mdDtStringRF": "Some text",
+        "mdDtTextRF": "Some long text",
+        "mdDtDateRF": 1437250255.000000000,
+        "mdDtNumberRF": 974.57,
+        "mdDtBooleanRF": false
+    }
+}

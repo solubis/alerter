@@ -1,0 +1,67 @@
+<form name="form" class="alert-action" ng-escape="$close()">
+
+    <div class="modal-header">
+        <h4 class="modal-title">{{ctrl.title | translate}}</h4>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="form-group alert-search">
+                    <label translate>Linked alert</label>
+
+                    <input alert-search
+                           class="form-control"
+                           autofocus
+                           maxlength="10"
+                           name="linkedAlert"
+                           ng-required="true"
+                           ng-model="ctrl.data.linkedAlert">
+
+                    <div class="error-message"
+                         ng-show="form.linkedAlert.$dirty && form.linkedAlert.$invalid" translate>Alert not found
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label translate>Link type</label>
+                    <select class="form-control"
+                            name="linkType"
+                            ng-required="true"
+                            ng-options="type.code as type.label for type in ctrl.dict.get('linkType')"
+                            ng-model="ctrl.data.linkType">
+                    </select>
+
+                    <div class="error-message"
+                         ng-show="form.linkType.$dirty && form.linkType.$invalid" translate>Link type is required
+                    </div>
+                </div>
+
+                <div class="form-group" authorize="ALERTER_ALERT_ADD_COMMENT">
+                    <label translate>Comment</label>
+                    <textarea class="form-control"
+                              autosize
+                              autofocus
+                              name="comment"
+                              placeholder="{{'Enter comment'|translate}}"
+                              ng-model="ctrl.comment"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <input type="button" class="btn btn-link"
+               value="{{'Cancel'|translate}}"
+               ng-click="$close()">
+
+        <input type="submit"
+               value="{{ctrl.acceptButtonLabel | translate}}"
+               class="btn btn-primary"
+               ng-click="ctrl.accept()"
+               ng-disabled="form.$invalid || form.$pristine">
+    </div>
+
+</form>

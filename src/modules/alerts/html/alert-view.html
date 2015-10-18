@@ -1,0 +1,373 @@
+<div class="alert-view">
+
+    <div class="toolbar">
+
+        <div class="buttons">
+            <button class="btn btn-primary btn-sm" authorize="ALERTER_ALERT_LIST"  type="button" ui-sref="alerts">
+                <i class="md md-arrow-back"></i>&nbsp;{{'Alert list'|translate}}
+            </button>
+
+            <button class="btn btn-primary btn-sm"
+                    type="button"
+                    ng-if="!authorize('ALERTER_ALERT_LIST')"
+                    ui-sref="dashboard">
+                <i class="md md-arrow-back"></i>&nbsp;{{'Predefined filters'|translate}}
+            </button>
+
+            <div class="btn-group btn-group-sm m-l-10" authorize="ALERTER_WORKFLOW_USE"  role="group">
+                <button class="btn bgm-bluegray"
+                        type="button"
+                        ng-click="ctrl.runTransition(transition);"
+                        ng-repeat="transition in ctrl.alert.availableTransitions">{{ transition | translate }}
+                </button>
+            </div>
+
+            <div class="btn-group btn-group-sm m-l-10 hidden-sm hidden-xs" role="group">
+                <button class="btn btn-default"
+                        ng-click="ctrl.assign()"
+                        ng-if="ctrl.hasPermissionToAssign()"
+                        type="button" translate>
+                    Assign
+                </button>
+
+                <button class="btn btn-default" ng-click="ctrl.assignSelf()" ng-if="ctrl.hasPermissionToAssignSelf()"
+                        type="button" translate>
+                    Assign to me
+                </button>
+
+                <button class="btn btn-default" ng-click="ctrl.link()" ng-if="ctrl.hasPermissionToLink()" type="button" translate>
+                    Link
+                </button>
+
+                <button class="btn btn-default" ng-click="ctrl.attach()" ng-if="ctrl.hasPermissionToAttach()" translate
+                        type="button">
+                    Attachment
+                </button>
+
+                <button class="btn btn-default" ng-click="ctrl.comment()" ng-if="ctrl.hasPermissionToComment()"
+                        type="button" translate>
+                    Comment
+                </button>
+
+                <button class="btn btn-default" ng-click="ctrl.edit()" ng-if="ctrl.hasPermissionToEdit()" type="button" translate>
+                    Edit
+                </button>
+
+                <button authorize="ALERTER_ALERT_REMOVE_TEST" class="btn btn-default" ng-click="ctrl.remove()"
+                        ng-if="ctrl.alert.testMode" type="button" translate>
+                    Remove
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="block-header">
+            <h2>Alert
+                <small>{{'ID:'|translate}}
+                    {{ ctrl.alert.id }}
+                </small>
+            </h2>
+        </div>
+
+        <div class="card">
+
+            <div class="card-header">
+                <h2>{{ ctrl.alert.title }}
+                    <small>{{ ctrl.alert.description }}</small>
+                </h2>
+
+                <ul class="actions">
+
+                    <li class="">
+                        <a href="" ng-click="ctrl.assign()" ng-if="ctrl.hasPermissionToAssign()"
+                           tooltip-placement="bottom" tooltip="{{'Assign'|translate}}">
+                            <i class="md  md-person-add"></i>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="" ng-click="ctrl.assignSelf()" ng-if="ctrl.hasPermissionToAssignSelf()"
+                           tooltip-placement="bottom" tooltip="{{'Assign to me'|translate}}">
+                            <i class="md  md-person-outline"></i>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="" ng-click="ctrl.link()" ng-if="ctrl.hasPermissionToLink()"
+                           tooltip-placement="bottom"
+                           tooltip="{{'Link'|translate}}">
+                            <i class="md md-link"></i>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="" ng-click="ctrl.attach()" ng-if="ctrl.hasPermissionToAttach()"
+                           tooltip-placement="bottom" tooltip="{{'Attachment'|translate}}">
+                            <i class="md md-attach-file"></i>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="" ng-click="ctrl.comment()" ng-if="ctrl.hasPermissionToComment()"
+                           tooltip-placement="bottom" tooltip="{{'Comment'|translate}}">
+                            <i class="md md-comment"></i>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="" ng-click="ctrl.edit()" ng-if="ctrl.hasPermissionToEdit()" tooltip-placement="bottom"
+                           tooltip="{{'Edit'|translate}}">
+                            <i class="md md-edit"></i>
+                        </a>
+                    </li>
+
+                    <li class="" ng-if="ctrl.alert.testMode">
+                        <a authorize="ALERTER_ALERT_REMOVE_TEST" href="" ng-click="ctrl.remove()"
+                           tooltip-placement="bottom" tooltip="{{'Remove'|translate}}">
+                            <i class="md md-delete"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="card-body">
+
+                <tabset>
+
+                    <!-- Basic info -->
+
+                    <tab heading="{{'Alert details'|translate}}">
+
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                                <table class="alert-details">
+                                    <tr>
+                                        <td translate>Category</td>
+                                        <td>{{ ctrl.alert.category | category}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>Product</td>
+                                        <td>{{ ctrl.alert.product | product}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>State</td>
+                                        <td>
+                                            <span class="label label-{{ctrl.alert.finalized | stateClass}}">{{ctrl.alert.state | state}}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>Priority</td>
+                                        <td>{{ ctrl.alert.priority | priority}}&nbsp;<img
+                                            ng-src="images/priority/{{ ctrl.alert.priority | priorityIcon }}.png"
+                                            tooltip-append-to-body="true">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td ng-if="ctrl.alert.testMode"></td>
+                                        <td ng-if="ctrl.alert.testMode">
+                                            <span class="label label-warning" translate>Test mode</span>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <table class="alert-details">
+                                    <tr>
+                                        <td translate>Creation date</td>
+                                        <td>{{ ctrl.alert.creationDate | dateFormat }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>Modification date</td>
+                                        <td>{{ ctrl.alert.modificationDate | dateFormat }}</td>
+                                    </tr>
+                                    <tr ng-if="ctrl.alert.finalizeDate">
+                                        <td translate>Finalize date</td>
+                                        <td>{{ ctrl.alert.finalizeDate | dateFormat }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>Creator</td>
+                                        <td class="two-lines">{{ ctrl.alert.createdByFullName }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>Assignee</td>
+                                        <td class="two-lines">
+                                            <span>{{ ctrl.alert.assignee.userFullName }}</span>
+                                            <small>{{ ctrl.alert.assignee.hierarchyName }}
+                                                /
+                                                {{ ctrl.alert.assignee.groupName }}
+                                            </small>
+                                        </td>
+                                    </tr>
+                                    <tr ng-if="ctrl.alert.tags && ctrl.alert.tags.length">
+                                        <td translate>Tags</td>
+                                        <td>
+                                            <span class="label label-primary" ng-repeat="tag in ctrl.alert.tags"
+                                                  style="margin-right:2px;">
+                                                {{ tag.code | tag }}</span>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </tab>
+
+                    <!-- Dynamic Fields -->
+
+                    <tab authorize="ALERTER_ALERT_VIEW_DYNAMIC" heading="{{'Dynamic fields'|translate}}" ng-if="ctrl.fields.length > 0">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="alert-details" dynamic-fields fields="ctrl.fields"
+                                       model="ctrl.alert.extras" record="ctrl.alert" templates="ctrl.templates"></table>
+                            </div>
+                        </div>
+
+                    </tab>
+
+                </tabset>
+
+                <!-- Comments -->
+
+                <tabset>
+                    <tab class="comments" heading="{{'Comments'|translate}} ({{ ctrl.alert.comments.length }})">
+
+                        <div class="listview lv-message">
+
+                            <div class="lv-body">
+                                <div class="lv-item media"
+                                     ng-repeat="comment in ctrl.alert.comments | orderBy: '-creationDate'">
+                                    <div class="lv-avatar pull-left">
+                                        <img alt="" src="images/avatar.jpg" ng-if="owner(comment.createdByLogin)">
+                                        <img alt="" src="images/avatar-bw.jpg" ng-if="!owner(comment.createdByLogin)">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="ms-item right text-wrap-xl">{{ comment.text }}</div>
+                                        <small class="ms-date">
+                                            {{ comment.createdByFullName}}
+                                            <i class="md md-access-time"></i> {{ comment.creationDate
+                                            | dateFormat}}
+                                        </small>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <h4 class="no-data" ng-if="!ctrl.alert.comments || !ctrl.alert.comments.length > 0" translate>No comments</h4>
+                    </tab>
+
+                    <!-- Links -->
+
+                    <tab heading="{{'Links'|translate}} ({{ ctrl.alert.linkedAlerts.length }})">
+
+                        <table class="ng-table-responsive table table-striped table-hover"
+                               ng-if="ctrl.alert.linkedAlerts.length > 0" ng-table="ctrl.linksTableParams">
+                            <thead>
+                            <tr>
+                                <th translate>Link type</th>
+                                <th translate>ID</th>
+                                <th translate>Title</th>
+                                <th translate>Creation date</th>
+                                <th translate>Actions</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr ng-repeat="link in ctrl.alert.linkedAlerts">
+                                <td>{{ link.linkTypeCode | link}}</td>
+                                <td>
+                                    <a ng-href="#/alerts/view/{{ link.linkedAlertId }}">{{ link.linkedAlertId }}</a>
+                                </td>
+                                <td>
+                                    <a ng-href="#/alerts/view/{{ link.linkedAlertId }}">{{ link.linkedAlertTitle }}</a>
+                                </td>
+                                <td>{{ link.creationDate | dateFormat }}</td>
+                                <td>
+                                    <button class="btn btn-icon list-command" ng-click="ctrl.removeLink(link)"
+                                            ng-if="authorize('ALERTER_ALERT_REMOVE_ALL_LINKS') || (authorize('ALERTER_ALERT_REMOVE_OWN_LINKS') && owner(link.createdBy))"
+                                            type="button">
+                                        <i class="md md-delete"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+
+                        <h4 class="loading" ng-if="ctrl.isLoading" translate>Loading data...</h4>
+                        <h4 class="loading" ng-if="ctrl.alert.linkedAlerts.length <= 0" translate>No linked alerts</h4>
+
+                    </tab>
+
+                    <!-- Attachments -->
+
+                    <tab heading="{{'Attachments'|translate}} ({{ ctrl.alert.attachments.length }})">
+
+                        <table class="ng-table-responsive table table-striped table-hover"
+                               ng-if="ctrl.alert.attachments.length > 0" ng-table="ctrl.attachmentsTableParams">
+                            <thead>
+                            <tr>
+                                <th translate>Name</th>
+                                <th translate>Type</th>
+                                <th translate>Size</th>
+                                <th translate>Creation date</th>
+                                <th class="hidden-xs" translate>Description</th>
+
+                                <th translate>Actions</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr ng-repeat="file in ctrl.alert.attachments">
+                                <td class="max-w-m" ng-if="file.name">
+                                    <a href ng-click="ctrl.downloadFile(file)">{{ file.name }}</a>
+                                </td>
+                                <td class="max-w-m" ng-if="file.url">
+                                    <a href="{{file.url}}" target="_blank">{{ file.url}}</a>
+                                </td>
+                                <td>{{ file.type || 'url'}}</td>
+                                <td class="no-wrap">{{ file.size |fileSize }}</td>
+                                <td class="no-wrap">{{ file.creationDate |dateFormat }}</td>
+                                <td class="text-wrap-l hidden-xs">{{ file.description }}</td>
+                                <td>
+                                    <button class="btn btn-icon list-command" ng-click="ctrl.removeAttachment(file)"
+                                            ng-if="authorize('ALERTER_ALERT_REMOVE_ALL_ATTACHMENTS') || (authorize('ALERTER_ALERT_REMOVE_OWN_ATTACHMENTS') && owner(file.createdBy))"
+                                            type="button">
+                                        <i class="md md-delete"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+
+                        <h4 class="loading" ng-if="ctrl.isLoading" translate>Loading data...</h4>
+                        <h4 class="loading" ng-if="ctrl.alert.attachments.length <= 0" translate>No attachments</h4>
+
+                    </tab>
+
+                    <!-- Activities -->
+
+                    <tab heading="{{'Activities'|translate}} ({{ ctrl.audit.totalElements }})" select="ctrl.getAudit()">
+                        <div ui-view="audit"></div>
+                    </tab>
+
+                </tabset>
+
+            </div>
+        </div>
+    </div>
+
+</div>

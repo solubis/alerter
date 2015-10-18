@@ -1,0 +1,202 @@
+<form role="form" novalidate name="form" class="alert-edit" ng-escape="$close()">
+
+    <div class="modal-header">
+        <h4 class="modal-title">{{'Alert'|translate}} <span ng-if="!ctrl.alert.isNew()">({{ ctrl.alert.id }})</span></h4>
+    </div>
+
+    <div class="modal-body">
+
+        <tabset>
+
+            <tab heading="{{'Details'|translate}}" active="true">
+
+                <div class="form-group">
+                    <label translate>Title</label>
+                    <input class="form-control"
+                           name="title"
+                           autofocus
+                           minlength="5"
+                           maxlength="128"
+                           placeholder=""
+                           ng-required="true"
+                           ng-model="ctrl.alert.title">
+
+                    <div class="error-message" ng-show="form.title.$dirty && form.title.$invalid" translate>
+                        Title is required (5-128 characters)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label translate>Priority</label>
+
+                            <ng-form class="radio" name="priority">
+                                <label class="radio radio-inline" ng-repeat="priority in ctrl.dict.priority">
+                                    <input type="radio"
+                                           name="priority"
+                                           ng-value="priority.code"
+                                           ng-model="ctrl.alert.priority">
+                                    <i class="input-helper"></i>
+                                    {{priority.label}}
+                                </label>
+                            </ng-form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group" ng-if="!ctrl.alert.isNew()">
+                            <label translate>State</label>
+
+                            <p class="label label-{{ctrl.alert.finalized | stateClass}}">
+                                {{ctrl.alert.state | state}}
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label translate>Category</label>
+                    <select class="form-control"
+                            name="category"
+                            ng-disabled="!ctrl.alert.isNew()"
+                            ng-required="true"
+                            ng-options="category.code as category.label for category in ctrl.dict.category"
+                            ng-model="ctrl.alert.category">
+                        <option value=""></option>
+                    </select>
+
+                    <div class="error-message"
+                         ng-show="form.category.$dirty && form.category.$invalid" translate>Category is required
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label translate>Product</label>
+                    <select class="form-control"
+                            name="product"
+                            ng-disabled="!ctrl.alert.isNew()"
+                            ng-required="true"
+                            ng-options="product.code as product.label for product in ctrl.dict.product"
+                            ng-model="ctrl.alert.product">
+                        <option value=""></option>
+                    </select>
+
+                    <div class="error-message"
+                         ng-show="form.product.$dirty && form.product.$invalid" translate>Product is required
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label translate>Assignee</label>
+
+                            <div select-organisation="ctrl.organisation"
+                                 name="assignee"
+                                 required
+                                 required-selection="hierarchyId,groupId"
+                                 ng-disabled="ctrl.hasPermissionToAssign()"
+                                 ng-model="ctrl.alert.assignee">
+                            </div>
+
+                            <div class="error-message" ng-show="form.assignee.$dirty && form.assignee.$invalid" translate>
+                                Choose at least hierarchy and group
+                            </div>
+                            <div class="error-message" ng-if="form.assignee.$dirty && !form.assignee.$invalid && ctrl.foreignAssignee" translate>
+                                Current assignee is outside your privileged groups. You will loose access to it after you save it
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label translate>Hierarchy / Group</label>
+
+                            <div style="margin-top:5px;">{{ ctrl.alert.assignee.hierarchyName }} / {{
+                                ctrl.alert.assignee.groupName }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" ng-if="!ctrl.alert.isNew()">
+                    <label translate>Creator</label>
+                    <input class="form-control" disabled ng-model="ctrl.alert.createdByFullName">
+                </div>
+
+                <div class="form-group test-mode" ng-if="ctrl.alert.isNew() || ctrl.alert.isTestModeEnabled()">
+                    <toggle-switch
+                        name="testMode"
+                        ng-model="ctrl.alert.testMode"
+                        ng-disabled="!ctrl.alert.isNew() && !authorize('ALERTER_ALERT_TRANSITION_TEST_TO_PROD')"
+                        on="{{'Test mode'|translate}}"
+                        off="{{'Production mode'|translate}}">
+                    </toggle-switch>
+                </div>
+
+                <div class="form-group">
+                    <label translate>Tags</label>
+                    <tags-input name="tags"
+                                ng-model="ctrl.alert.tags"
+                                placeholder="{{ 'Add tag' | translate }}">
+                        <auto-complete source="ctrl.loadTags($query)"></auto-complete>
+                    </tags-input>
+                </div>
+
+            </tab>
+
+            <tab heading="{{'Description'|translate}}">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control"
+                                  autosize
+                                  name="description"
+                                  placeholder="{{'Enter description'|translate}}"
+                                  ng-model="ctrl.alert.description"></textarea>
+                    </div>
+                </div>
+            </tab>
+
+            <!--  Dynamic Fields  -->
+
+            <tab heading="{{'Dynamic fields'|translate}}" ng-if="ctrl.fields.length > 0" authorize="ALERTER_ALERT_VIEW_DYNAMIC">
+                <dynamic-fields
+                    record="ctrl.alert"
+                    model="ctrl.alert.extras"
+                    fields="ctrl.fields"
+                    templates="ctrl.templates">
+                </dynamic-fields>
+            </tab>
+
+            <tab heading="{{'Comment'|translate}}" authorize="ALERTER_ALERT_ADD_COMMENT">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control"
+                                  autosize
+                                  name="comment"
+                                  placeholder="{{'Enter comment'|translate}}"
+                                  ng-model="ctrl.comment"></textarea>
+                    </div>
+                </div>
+            </tab>
+
+        </tabset>
+
+    </div>
+
+    <div class="modal-footer">
+        <input type="button"
+               class="btn btn-link"
+               value="{{'Cancel'|translate}}"
+               ng-click="$close()">
+
+        <input type="submit"
+               class="btn btn-primary"
+               value="{{'Save'|translate}}"
+               ng-disabled="!ctrl.isValid()"
+               ng-click="ctrl.saveChanges(form)">
+    </div>
+
+</form>

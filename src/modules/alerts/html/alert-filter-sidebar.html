@@ -1,0 +1,247 @@
+<div class="alert-filters" ng-enter="ctrl.updateListFilter()">
+
+    <div class="toolbar">
+
+        <ul class="actions">
+            <li>
+                <a href=""
+                   ng-click="$dismiss()"
+                   tooltip-append-to-body="true"
+                   tooltip-placement="bottom"
+                   tooltip="{{ 'Close' | translate }}">
+
+                    <i class="md md-close"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href=""
+                   ng-click="ctrl.clearFilter()"
+                   tooltip-append-to-body="true"
+                   tooltip-placement="bottom"
+                   tooltip="{{ 'Clear filter' | translate}}">
+
+                    <i class="md md-delete"></i>
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="dropdown"
+                   href ng-click="ctrl.open()"
+                   tooltip-append-to-body="true"
+                   tooltip-placement="bottom"
+                   tooltip="{{  'Add field to filter' | translate }}">
+
+                    <i class="md md-add"></i>
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="listview">
+                        <div class="lv-header" translate>
+                            Fields
+                        </div>
+                        <div class="lv-body" tabindex="1">
+                            <a class="lv-item" href ng-click="ctrl.addToDynamicFields(field)"
+                               ng-repeat="field in filteredItems = (ctrl.metadata | filter: ctrl.isNotSelected)">
+                                <div class="media">
+                                    <div class="pull-left">
+                                        <i class="md md-lg" ng-class="ctrl.fieldTypeIcon(field.type)"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="lv-title">{{ field.label | translate}}</div>
+                                        <small class="lv-small text-wrap-m">{{ field.description | translate }}</small>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div class="loading" ng-show="filteredItems.length === 0" translate>All fields selected
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="fields p-15">
+
+        <div class="form-group">
+            <label translate>Category</label>
+
+            <div alter-input-model="true"
+                 button-label="label"
+                 class="multi-select"
+                 helper-elements="none"
+                 input-model="ctrl.dict.category"
+                 item-label="label"
+                 max-labels="1"
+                 multi-select
+                 output-model="ctrl.fields.staticFields.category"
+                 tick-property="selected"
+                 translation="multiSelectLabels"></div>
+        </div>
+
+        <div class="form-group">
+            <label translate>Product</label>
+
+            <div button-label="label"
+                 class="multi-select"
+                 helper-elements="none"
+                 input-model="ctrl.dict.product"
+                 item-label="label"
+                 max-labels="1"
+                 multi-select output-model="ctrl.fields.staticFields.product"
+                 tick-property="selected"
+                 translation="multiSelectLabels"></div>
+        </div>
+
+        <div class="form-group">
+            <label translate>State</label>
+
+            <div button-label="label"
+                 class="multi-select"
+                 helper-elements="none"
+                 input-model="ctrl.dict.state"
+                 item-label="label"
+                 max-labels="1"
+                 multi-select
+                 output-model="ctrl.fields.staticFields.state"
+                 tick-property="selected"
+                 translation="multiSelectLabels"></div>
+        </div>
+
+        <div class="form-group">
+            <label translate>Priority</label>
+
+            <div button-label="label"
+                 class="multi-select"
+                 helper-elements="none"
+                 input-model="ctrl.dict.priority"
+                 item-label="label"
+                 max-labels="1"
+                 multi-select
+                 output-model="ctrl.fields.staticFields.priority"
+                 tick-property="selected"
+                 translation="multiSelectLabels"></div>
+        </div>
+
+        <div class="form-group">
+            <label translate>Tags</label>
+            <tags-input display-property="label"
+                        key-property="code"
+                        ng-model="ctrl.fields.staticFields.tag"
+                        placeholder="{{ 'Add tag' | translate }}">
+                <auto-complete source="ctrl.getTags($query)"></auto-complete>
+            </tags-input>
+        </div>
+
+        <div class="row" ng-repeat="field in ctrl.metadata | filter:{selected:true}">
+
+            <!--  DATE  -->
+
+            <div class="search-item" ng-if="field.type==='date'">
+                <div class="search-field form-group">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>{{ field.label | translate}} {{'from:'|translate}}</label>
+                            <datetimepicker date-only="false"
+                                            max-date="{{ ctrl.fields.dynamicFields[field.code].to }}"
+                                            ng-model="ctrl.fields.dynamicFields[field.code].from">
+                            </datetimepicker>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label>{{'to:'|translate}}</label>
+                            <datetimepicker date-only="false"
+                                            min-date="{{ ctrl.fields.dynamicFields[field.code].from }}"
+                                            ng-model="ctrl.fields.dynamicFields[field.code].to">
+                            </datetimepicker>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-field-remove">
+                    <i class="md md-clear" ng-click="ctrl.removeFromDynamicFields(field)"
+                       tooltip="{{ 'Remove field from filter' | translate}}"></i>
+                </div>
+
+            </div>
+
+            <!--  NUMBER  -->
+
+            <div class="search-item" ng-if="field.type==='number'">
+                <div class="search-field form-group">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>{{ field.label | translate}}
+                                od:</label>
+
+                            <input class="form-control" maxlength="9"
+                                   ng-model="ctrl.fields.dynamicFields[field.code].from" size="9" style="width: 100px;"
+                                   type="number">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label>do:
+                            </label>
+
+                            <input class="form-control" maxlength="9"
+                                   ng-model="ctrl.fields.dynamicFields[field.code].to" size="9" style="width: 100px;"
+                                   type="number">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-field-remove">
+                    <i class="md md-clear" ng-click="ctrl.removeFromDynamicFields(field)"
+                       tooltip="{{ 'Remove field from filter' | translate}}"></i>
+                </div>
+            </div>
+
+            <!--  STRING  -->
+
+            <div class="search-item" ng-if="field.type==='string'">
+                <div class="search-field form-group">
+                    <label>{{ field.label | translate}}</label>
+                    <input class="form-control" maxlength="25" ng-model="ctrl.fields.dynamicFields[field.code]"
+                           type="text">
+                </div>
+                <div class="search-field-remove">
+                    <i class="md md-clear" ng-click="ctrl.removeFromDynamicFields(field)"
+                       tooltip="{{ 'Remove field from filter' | translate}}"></i>
+                </div>
+            </div>
+
+            <!--  BOOLEAN  -->
+
+            <div class="search-item" ng-if="field.type==='boolean'" style="margin: 5px 0 30px 0;">
+                <div class="search-field form-group">
+                    <label class="checkbox checkbox-inline">
+                        <input ng-model="ctrl.fields.dynamicFields[field.code]" three-state type="checkbox">
+                        <i class="input-helper"></i>
+                        {{ field.label | translate }}
+                    </label>
+                </div>
+                <div class="search-field-remove">
+                    <i class="md md-clear" ng-click="ctrl.removeFromDynamicFields(field)"
+                       tooltip="{{ 'Remove field from filter' | translate}}"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="filter-button btn btn-link" ng-click="$dismiss()" ng-escape="$dismiss()">
+            <span translate>Close</span>
+        </button>
+
+        <button class="filter-button btn btn-primary" ng-click="ctrl.updateList()">
+            <span translate>Apply</span>
+        </button>
+
+    </div>
+</div>

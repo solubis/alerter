@@ -1,0 +1,32 @@
+<div class="alert-audit">
+
+    <table ng-table="ctrl.tableParams"
+           class="table table-striped table-hover"
+           ng-if="ctrl.data.length > 0">
+
+        <thead>
+        <tr>
+            <th ng-table-sort-header="date">{{ 'Date' | translate }}</th>
+            <th translate>Author</th>
+            <th translate>Change</th>
+            <th translate>Old value</th>
+            <th translate>New value</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="item in ctrl.data">
+            <td>{{ item.date | dateFormat}}</td>
+            <td>{{ item.author }}</td>
+            <td>{{ item.field | translate }}</td>
+            <td class="text-wrap-m">{{ item.oldValue | translate}}</td>
+            <td class="text-wrap-m">{{ item.newValue | translate}}</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+    <h4 ng-if="ctrl.isLoading" class="loading" translate>Loading data...</h4>
+    <h4 ng-if="ctrl.data.length <= 0" class="loading" translate>No activities</h4>
+
+</div>

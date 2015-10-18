@@ -1,0 +1,23 @@
+<div class="alert-found-dropdown">
+
+    <div class="match-title" translate>
+        Alert found
+    </div>
+    <dl class="match-list">
+        <dt translate>Title</dt>
+        <dd ng-bind="match.model.title"></dd>
+
+        <dt translate>Category</dt>
+        <dd>{{ match.model.category | category}}</dd>
+        <dt translate>Product</dt>
+        <dd>{{ match.model.product | product}}</dd>
+        <dt>Status</dt>
+        <dd><span class="label label-{{match.model.state | stateClass}}">{{match.model.state | state}}</span>
+        </dd>
+        <dt translate>Priority</dt>
+        <dd>{{ match.model.priority | priority}}&nbsp;
+            <img tooltip-append-to-body="true" ng-src="images/priority/{{match.model.priority | priorityIcon}}.png">
+        </dd>
+    </dl>
+
+</div>
