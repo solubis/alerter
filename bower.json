@@ -4,7 +4,7 @@
     "authors": [
         "Jurek Błaszczyk"
     ],
-    "description": "IQ Fraud Console",
+    "description": "Alerter Console",
     "license": "Unlicense",
     "ignore": [
         "**/.*",

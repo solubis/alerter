@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0-SNAPSHOT.20158301428",
+    "version": "1.0.0-RC1",
     "description": "alerter",
     "repository": "git@gitlab.com:solubis/alerter.git",
     "license": "Unlicense",

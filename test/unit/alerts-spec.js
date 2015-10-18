@@ -1,6 +1,6 @@
 describe('Alerts Module', function () {
 
-    beforeEach(module('squealer'));
+    beforeEach(module('alerter'));
 
     beforeEach(function () {
         expectServerRequest('alert', 'number=0&size=100');

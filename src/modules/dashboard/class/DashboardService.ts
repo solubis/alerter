@@ -6,9 +6,9 @@ import DictionariesService from '../../dictionaries/class/DictionariesService';
 /*@ngInject*/
 class DashboardService {
 
-    constructor(private $alerts:AlertService,
-                private $q:ng.IQService,
-                private $dictionaries:DictionariesService) {
+    constructor(private $alerts: AlertService,
+        private $q: ng.IQService,
+        private $dictionaries: DictionariesService) {
     }
 
     getDictionariesStatistics() {
@@ -17,7 +17,7 @@ class DashboardService {
         var result = {};
         var dict = this.$dictionaries.get();
 
-        angular.forEach(['category', 'product', 'priority'], (dictionaryName)=> {
+        angular.forEach(['category', 'product', 'priority'], (dictionaryName) => {
             result[dictionaryName] = {};
 
             angular.forEach(dict[dictionaryName], (value) => {
@@ -25,7 +25,7 @@ class DashboardService {
 
                 var getTotalForDictionaryItem = (dictionaryName, item) => {
                     return this
-                        .getCount({[dictionaryName]: item.code})
+                        .getCount({ [dictionaryName]: item.code })
                         .then((count) => {
                             result[dictionaryName][item.code].total = count;
                         });
@@ -33,7 +33,7 @@ class DashboardService {
 
                 var getFinalizedForDictionaryItem = (dictionaryName, item) => {
                     return this
-                        .getCount({[dictionaryName]: item.code, finalized: true})
+                        .getCount({ [dictionaryName]: item.code, finalized: true })
                         .then((count) => {
                             result[dictionaryName][item.code].finalized = count;
                         });
@@ -52,7 +52,7 @@ class DashboardService {
     }
 
     getCount(filter = {}) {
-        return this.$alerts.count(filter).then((result) => result);
+        return this.$alerts.count(filter).then((result) => 45);
     }
 }
 

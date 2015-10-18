@@ -1,4 +1,4 @@
-window.IQ_I18N = {
+window.ALERTER_I18N = {
     'pl': {
         'Yes': 'Tak',
         'No': 'Nie',

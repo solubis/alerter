@@ -1,6 +1,6 @@
 describe('Core Module', function () {
 
-    beforeEach(module('squealer'));
+    beforeEach(module('alerter'));
 
     beforeEach(inject(function ($dictionaries) {
         $dictionaries.init();

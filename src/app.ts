@@ -7,7 +7,7 @@ import dictionaries from './modules/dictionaries/dictionaries';
 import menu from './modules/menu/menu';
 import core from './modules/core/core';
 
-angular.module('squealer', ['fds.ui', 'fds.core', 'modules.html',
+angular.module('alerter', ['alerter.ui', 'alerter.core', 'modules.html',
     core.name, alerts.name, dictionaries.name, workflow.name, dashboard.name, menu.name])
 
     .config(($urlRouterProvider, $stateProvider, $configProvider, $logProvider, $restProvider, $oauthTokenProvider, $translateProvider, $securityProvider, $hotkeysProvider) => {
@@ -146,7 +146,7 @@ angular.module('squealer', ['fds.ui', 'fds.core', 'modules.html',
          */
         $rootScope.$version = $config.version;
 
-        $log.info('IQ Squealer', $config.version);
+        $log.info('Alerter', $config.version);
 
     });
 
@@ -154,5 +154,5 @@ angular.module('squealer', ['fds.ui', 'fds.core', 'modules.html',
  Bootstrap application
  */
 angular.element(document).ready(() => {
-    angular.bootstrap(document, ['squealer'], {});
+    angular.bootstrap(document, ['alerter'], {});
 });

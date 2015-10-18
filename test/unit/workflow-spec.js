@@ -1,6 +1,6 @@
 describe('Workflow Module', function () {
 
-    beforeEach(module('squealer'));
+    beforeEach(module('alerter'));
 
     beforeEach(function () {
         expectServerRequest('workflow');
