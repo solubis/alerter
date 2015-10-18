@@ -19,8 +19,8 @@
     "dependencies": {
         "angular-drag-and-drop-lists": "1.x",
         "angular-ui-ace": "bower",
-        "core": "git@code.impaqgroup.com:fds-components/core.git#develop",
-        "ui": "git@code.impaqgroup.com:fds-components/ui.git#develop",
+        "core": "git@gitlab.com:solubis/alerter-core.git",
+        "ui": "git@gitlab.com:solubis/alerter-ui.git",
         "ng-tags-input": "3.x"
     },
     "devDependencies": {

@@ -1,7 +1,7 @@
 {
     "version": "1.0.0-SNAPSHOT.20158301428",
     "description": "alerter",
-    "repository": "git@code.impaqgroup.com:squealer/ui.git",
+    "repository": "git@gitlab.com:solubis/alerter.git",
     "license": "Unlicense",
     "devDependencies": {
         "grunt": "*",
